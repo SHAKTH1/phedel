@@ -1,0 +1,1307 @@
+body {
+    font-family:"Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    overflow-x: hidden;
+}
+.products-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1b1b1b; /* Dark background to match the image */
+    color: #fff;
+}
+
+.products-section h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    letter-spacing: 15px;
+    margin-left: -41%;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-item {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.product-item img:first-child {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.product-item img:nth-child(2) {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    width: 70%;
+    height: auto;
+    max-height: 80%;
+}
+
+.product-item p {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+/* product-info section */
+.product-info {
+    padding: 50px 20px;
+}
+
+.product-info h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #8BC34A; /* Green underline */
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-left: 7%;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    font-size: 1.1rem;
+    font-weight: 600;
+    max-width: 300px; /* Max width for each feature */
+    flex: 1 1 30%; /* Flexbox to allow wrapping */
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left: 2px solid #8BC34A; /* Green line on the left */
+}
+
+/* Standards & Compliances Section */
+.standards-compliances {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.standards-compliances h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #8BC34A; /* Green underline */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.compliances-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.compliance-item {
+    text-align: center;
+    flex: 1 1 45%; /* Adjust as needed */
+    min-width: 200px;
+}
+
+.compliance-item img {
+    max-width: 100px;
+    height: auto;
+    border-bottom: 4px solid #8BC34A;
+}
+
+.compliance-item h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+.compliance-item p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Network Cabinets Section */
+.network-cabinets {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.network-cabinets h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    border-top: 4px solid #8BC34A;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: left;
+    flex: 1 1 30%; /* Adjust as needed */
+    min-width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+   
+}
+
+.feature-item h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.feature-item img{
+    width: 55%;
+}
+.additional-features {
+    font-size: 0.8rem;
+    margin-top: 30px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Technical Data Section */
+.technical-data {
+    text-align: center;
+    padding: 50px 20px;
+   
+}
+
+.technical-data img {
+        width: 30%;
+        transform: translateX(-101%);
+       
+}
+    
+
+
+.technical-data h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: -5px;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-right: 64%;
+
+}
+
+.technical-data-table {
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: 20%;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 2px solid #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0; /* Light grey underline */
+}
+
+.table-cell {
+    flex: 1;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.table-row .table-cell {
+    border-bottom: 1px solid #e0e0e0; /* Light grey underline */
+}
+
+
+/* smart rack */
+
+.smart-rack-section {
+    padding: 0px 13px;
+    text-align: left;
+    background-color: #fff;
+}
+
+.smart-rack-section .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+    margin-top: -63%;
+    margin-left: 7%;
+}
+
+.smart-rack-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.smart-rack-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.smart-rack-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+
+.green-line-smart-right img{
+    width: 38%;
+    margin-left: 63%;
+}
+
+.green-line-smart-left img{
+    width: 40%;
+    margin-top: -23%;
+    margin-left: -2%;
+}
+.smart-rack-section::before {
+    top: 0;
+}
+
+.smart-rack-section::after {
+    bottom: 0;
+}
+
+/* telecomm products */
+
+
+.telecomm-products-section {
+    padding: 14px 0px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+}
+
+.telecomm-products-section .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.telecomm-products-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    text-align: center;
+    text-align: left;
+}
+
+.telecomm-products-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.telecomm-products-section ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.telecomm-products-section img{
+ width: 57%;
+}
+.telecomm-products-section ol li {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+.telecomm-products-section::before {
+    left: 0;
+    top: 0;
+}
+
+.telecomm-products-section::after {
+    right: 0;
+    top: 0;
+}
+.green-line-tele-left{
+    margin-left: 0%;
+}
+.green-line-tele-right{
+    margin-right: -1%;
+}
+.green-line-tele-left img{
+    width: 100%;
+    margin-left: 0%;
+}
+.green-line-tele-right img{
+    width: 100%;
+    margin-left: -8%;
+
+}
+
+
+/* battery rack */
+
+.battery-rack-section {
+    padding: 50px 20px;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    position: relative;
+    overflow: hidden;
+}
+
+.battery-rack-content{
+    max-width: 800px;
+    margin-left: 7%;
+}
+.battery-rack-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.battery-rack-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.battery-rack-section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.battery-rack-section a {
+    color: #00f; /* Blue text for links */
+    text-decoration: none;
+}
+
+.battery-rack-section a:hover {
+    text-decoration: underline;
+}
+.battery-right-line{
+    height: 34vh;
+    margin-right: -2%;
+}
+.battery-right-line img{
+    margin-left: 60%;
+    width: 39%;
+    margin-top: 0%;
+}
+
+/* HDPE PLB DUCT PIPES Section */
+
+.hdpe-duct-pipes-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 25px 0px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    position: relative;
+    overflow: hidden;
+}
+
+.hdpe-duct-pipes-content {
+    max-width: 60%;
+}
+
+.hdpe-duct-pipes-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0px;
+    margin-left: 14%;
+}
+
+.hdpe-duct-pipes-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin-left: 14%;
+    text-align: justify;
+}
+
+.hdpe-duct-pipes-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-left: 14%;
+}
+
+
+.hdpe-duct-pipes-content img {
+    width: 61%;
+    margin-left: 14%;
+}
+.hdpe-duct-pipes-section ul li {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.hdpe-duct-pipes-design {
+    max-width: 35%;
+}
+
+.hdpe-duct-pipes-design img {
+    width: 100%;
+    height: auto;
+}
+.left-arrows-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 23%;
+    margin-left: 77%;
+  
+  }
+  
+  .right-arrows-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 31%;
+    margin-left: 60%;
+    margin-top: -118%;
+  }
+  
+  .left-arrow {
+    width: 25%;
+    margin-left: 41%;
+    margin-top: -71%;
+  }
+
+  /* server-rack */
+
+  .server-racks-section {
+    padding: 50px 20px;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    position: relative;
+    overflow: hidden;
+}
+
+.server-racks-section .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-left: 6%;
+}
+
+.server-racks-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: -8px;
+    text-align: left;
+}
+
+.server-racks-section img{
+    width: 50%;
+}
+.server-racks-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.server-bottom-green{
+    width: 30%;
+    height: 20vh;
+    margin-left: -2%;
+}
+
+.server-bottom-green img{
+    margin-top: -125%;
+    width: 179%;
+}
+
+/* outdoor racks section */
+.outdoor-racks-section {
+    padding: 50px 20px;
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+    position: relative;
+    overflow: hidden;
+}
+
+.outdoor-racks-section .content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin-left: 6%;
+}
+
+.outdoor-racks-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: -8px;
+    text-align: left;
+}
+
+.outdoor-racks-section a {
+    color: #57c6a7; /* Green color for links */
+    text-decoration: none;
+}
+
+.outdoor-racks-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+.outdoor-racks-section img{
+    width: 45%;
+}
+
+
+@media (max-width: 992px) {
+    .feature {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+    
+    .product-item p {
+        font-size: 0.9rem;
+    }
+
+    .network-cabinets h1 {
+        font-size: 1.5rem;
+    }
+
+    .feature-item h2 {
+        font-size: 1rem;
+    }
+
+    .feature-item p {
+        font-size: 0.8rem;
+    }
+    .technical-data h1 {
+        font-size: 2rem;
+        margin-right: 50%;
+    }
+
+    .technical-data img {
+        width: 25%;
+        transform: translateX(-100%);
+    }
+
+    .table-header, .table-row {
+        font-size: 1rem;
+    }
+    .smart-rack-section {
+        padding: 40px 15px;
+    }
+
+    .smart-rack-section .content-container {
+        margin-top: -50%;
+    }
+
+    .smart-rack-section h1 {
+        font-size: 2rem;
+    }
+
+    .smart-rack-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .smart-rack-section p {
+        font-size: 0.9rem;
+    }
+
+    .green-line-smart-right img {
+        width: 30%;
+        margin-left: 71%;
+    }
+
+    .green-line-smart-left img {
+        width: 35%;
+        margin-top: -20%;
+    }
+    .telecomm-products-section {
+        padding: 40px 15px;
+    }
+
+    .telecomm-products-section h1 {
+        font-size: 2rem;
+    }
+
+    .telecomm-products-section p {
+        font-size: 0.9rem;
+    }
+
+    .telecomm-products-section ol li {
+        font-size: 0.9rem;
+    }
+
+    .green-line-tele-left img {
+        width: 194%;
+        margin-left: -15%;
+    }
+
+    .green-line-tele-right img {
+        width: 216%;
+        margin-left: -109%;
+
+    }
+    .battery-rack-section {
+        padding: 40px 15px;
+    }
+
+    .battery-rack-section h1 {
+        font-size: 2rem;
+    }
+
+    .battery-rack-section h2 {
+        font-size: 1.3rem;
+    }
+
+    .battery-rack-section p {
+        font-size: 0.9rem;
+    }
+
+    .battery-rack-content {
+        margin-left: 5%;
+    }
+
+    .battery-right-line {
+        height: 30vh;
+    }
+
+    .battery-right-line img {
+        margin-left: 55%;
+        width: 40%;
+    }
+    .hdpe-duct-pipes-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .hdpe-duct-pipes-content {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .hdpe-duct-pipes-section h1,
+    .hdpe-duct-pipes-section p,
+    .hdpe-duct-pipes-section ul {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .hdpe-duct-pipes-content img {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .hdpe-duct-pipes-design {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    .left-arrows-container,
+    .right-arrows-container {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+        display: none;
+    }
+
+    .right-arrows-container {
+        margin-top: 0;
+    }
+
+    .left-arrow {
+        width: 50%;
+        margin-left: 0;
+        margin-top: 20px;
+        display: none;
+    }
+    .outdoor-racks-section .content-container {
+        margin-left: 4%;
+    }
+    .outdoor-racks-section h1 {
+        font-size: 2rem;
+    }
+    .outdoor-racks-section p {
+        font-size: 0.9rem;
+    }
+    .outdoor-racks-section img {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .feature {
+        flex: 1 1 100%; /* Full width on small screens */
+    }
+
+    .products-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .feature-item h2 {
+        font-size: 0.9rem;
+    }
+
+    .feature-item p {
+        font-size: 0.7rem;
+    }
+    .feature-item img{
+        width: 20%;
+    }
+    .table-header, .table-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table-cell {
+        width: 100%;
+        text-align: center;
+    }
+    .technical-data h1 {
+        font-size: 1.8rem;
+        margin-right: 45%;
+    }
+
+    .technical-data img {
+        width: 20%;
+        transform: translateX(-100%);
+    }
+
+    .table-header, .table-row {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+    }
+
+    .table-cell {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .smart-rack-section {
+        padding: 30px 10px;
+    }
+
+    .smart-rack-section .content-container {
+        margin-top: -40%;
+    }
+
+    .smart-rack-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .smart-rack-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .smart-rack-section p {
+        font-size: 0.85rem;
+    }
+
+    .green-line-smart-right img {
+        width: 25%;
+        margin-left: 76%;
+    }
+
+    .green-line-smart-left img {
+        width: 30%;
+        margin-top: -18%;
+    }
+
+    .smart-rack-section::before,
+    .smart-rack-section::after {
+        height: 1px;
+    }
+    .telecomm-products-section {
+        padding: 30px 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .telecomm-products-section h1 {
+        font-size: 1.8rem;
+        text-align: left;
+    }
+
+    .telecomm-products-section p {
+        font-size: 0.85rem;
+    }
+
+    .telecomm-products-section ol li {
+        font-size: 0.85rem;
+    }
+
+    .green-line-tele-left img {
+        width: 70%;
+        margin-left: -6%;
+        display: none;
+    }
+
+    .green-line-tele-right img {
+        width: 70%;
+        margin-left: 2%;
+        display: none;;
+    }
+
+    .telecomm-products-section::before,
+    .telecomm-products-section::after {
+        height: 1px;
+    }
+    .battery-rack-section {
+        padding: 30px 10px;
+    }
+
+    .battery-rack-section h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .battery-rack-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .battery-rack-section p {
+        font-size: 0.85rem;
+    }
+
+    .battery-rack-content {
+        margin-left: 4%;
+    }
+
+    .battery-right-line {
+        height: 25vh;
+    }
+
+    .battery-right-line img {
+        margin-left: 50%;
+        width: 45%;
+    }
+    .hdpe-duct-pipes-section {
+        padding: 20px 10px;
+    }
+
+    .hdpe-duct-pipes-section h1 {
+        font-size: 2rem;
+    }
+
+    .hdpe-duct-pipes-section p,
+    .hdpe-duct-pipes-section ul li {
+        font-size: 0.9rem;
+    }
+
+    .left-arrow {
+        width: 50%;
+    }
+    .outdoor-racks-section .content-container {
+        margin-left: 3%;
+    }
+    .outdoor-racks-section h1 {
+        font-size: 1.8rem;
+    }
+    .outdoor-racks-section p {
+        font-size: 0.85rem;
+    }
+    .outdoor-racks-section img {
+        width: 55%;
+    }
+}
+
+@media (max-width: 576px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .products-section h1 {
+        font-size: 1.2rem;
+        margin-left: 6%;
+    }
+
+    .product-item p {
+        font-size: 0.7rem;
+    }
+
+    .network-cabinets h1 {
+        font-size: 1rem;
+    }
+
+    .feature-item h2 {
+        font-size: 0.8rem;
+    }
+
+    .feature-item p {
+        font-size: 0.6rem;
+    }
+
+    .additional-features {
+        font-size: 0.7rem;
+    }
+    .technical-data h1 {
+        font-size: 1.5rem;
+        margin-right: 40%;
+    }
+
+    .technical-data img {
+        width: 51%;
+        transform: translateX(-41%);
+    }
+
+    .table-header, .table-row {
+        font-size: 0.8rem;
+    }
+    .smart-rack-section {
+        padding: 20px 5px;
+    }
+
+    .smart-rack-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .smart-rack-section h2 {
+        font-size: 1rem;
+    }
+
+    .smart-rack-section p {
+        font-size: 0.8rem;
+    }
+    .smart-rack-section {
+        padding: 20px 5px;
+    }
+
+    .smart-rack-section .content-container {
+        margin-top: -30%;
+    }
+
+    .smart-rack-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .smart-rack-section h2 {
+        font-size: 1rem;
+    }
+
+    .smart-rack-section p {
+        font-size: 0.8rem;
+    }
+    .green-line-smart-right{
+        height: 17vh;
+    }
+
+    .green-line-smart-right img {
+        width: 50%;
+        margin-left: 51%;
+    }
+
+    .green-line-smart-left img {
+        width: 63%;
+        margin-top: -40%;
+    }
+    .telecomm-products-section {
+        padding: 20px 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .telecomm-products-section h1 {
+        font-size: 1.5rem;
+        text-align: left;
+    }
+
+    .telecomm-products-section p {
+        font-size: 0.8rem;
+    }
+
+    .telecomm-products-section ol li {
+        font-size: 0.8rem;
+    }
+
+    .green-line-tele-left img {
+        width: 60%;
+        margin-left: -5%;
+        display: none;
+    }
+
+    .green-line-tele-right img {
+        width: 60%;
+        margin-left: 1%;
+        display: none;
+    }
+    .battery-rack-section {
+        padding: 20px 5px;
+    }
+
+    .battery-rack-section h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .battery-rack-section h2 {
+        font-size: 1rem;
+    }
+
+    .battery-rack-section p {
+        font-size: 0.8rem;
+    }
+
+    .battery-rack-content {
+        margin-left: 3%;
+    }
+
+    .battery-right-line {
+        height: 20vh;
+    }
+
+    .battery-right-line img {
+        margin-left: 45%;
+        width: 50%;
+    }
+    .hdpe-duct-pipes-section {
+        padding: 20px 10px;
+    }
+
+    .hdpe-duct-pipes-section h1 {
+        font-size: 1.8rem;
+    }
+
+    .hdpe-duct-pipes-section p,
+    .hdpe-duct-pipes-section ul li {
+        font-size: 0.85rem;
+    }
+
+    .left-arrow {
+        width: 75%;
+    }
+    .outdoor-racks-section .content-container {
+        margin-left: 2%;
+    }
+    .outdoor-racks-section h1 {
+        font-size: 1.5rem;
+    }
+    .outdoor-racks-section p {
+        font-size: 0.8rem;
+    }
+    .outdoor-racks-section img {
+        width: 60%;
+    }
+}
+
+@media (max-width: 400px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .products-section h1 {
+        font-size: 1rem;
+    }
+
+    .product-item p {
+        font-size: 0.6rem;
+    }
+
+    .network-cabinets h1 {
+        font-size: 1rem;
+    }
+
+    .feature-item h2 {
+        font-size: 0.7rem;
+    }
+
+    .feature-item p {
+        font-size: 0.5rem;
+    }
+    .technical-data h1 {
+        font-size: 1.2rem;
+        margin-right: 30%;
+    }
+
+    .technical-data img {
+        width: 20%;
+        transform: translateX(-100%);
+    }
+
+    .table-header, .table-row {
+        font-size: 0.7rem;
+    }
+    .smart-rack-section {
+        padding: 10px 5px;
+    }
+
+    .smart-rack-section .content-container {
+        margin-top: -20%;
+    }
+
+    .smart-rack-section h1 {
+        font-size: 1.2rem;
+    }
+
+    .smart-rack-section h2 {
+        font-size: 0.9rem;
+    }
+
+    .smart-rack-section p {
+        font-size: 0.75rem;
+    }
+
+    .green-line-smart-right img {
+        width: 15%;
+        margin-left: 45%;
+    }
+
+    .green-line-smart-left img {
+        width: 20%;
+        margin-top: -10%;
+    }
+    .telecomm-products-section {
+        padding: 10px 5px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .telecomm-products-section h1 {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .telecomm-products-section p {
+        font-size: 0.75rem;
+    }
+
+    .telecomm-products-section ol li {
+        font-size: 0.75rem;
+    }
+
+    .green-line-tele-left img {
+        width: 50%;
+        margin-left: -4%;
+        display: none;
+    }
+
+    .green-line-tele-right img {
+        width: 50%;
+        margin-left: 0%;
+        display: none;
+    }
+    .battery-rack-section {
+        padding: 10px 5px;
+    }
+
+    .battery-rack-section h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .battery-rack-section h2 {
+        font-size: 0.9rem;
+    }
+
+    .battery-rack-section p {
+        font-size: 0.75rem;
+    }
+
+    .battery-rack-content {
+        margin-left: 2%;
+    }
+
+    .battery-right-line {
+        height: 15vh;
+    }
+
+    .battery-right-line img {
+        margin-left: 40%;
+        width: 55%;
+    }
+    .hdpe-duct-pipes-section {
+        padding: 10px 5px;
+    }
+
+    .hdpe-duct-pipes-section h1 {
+        font-size: 1.5rem;
+    }
+
+    .hdpe-duct-pipes-section p,
+    .hdpe-duct-pipes-section ul li {
+        font-size: 0.75rem;
+    }
+
+    .left-arrow {
+        width: 100%;
+    }
+    
+    .server-bottom-green img {
+        margin-top: -181%;
+        width: 337%;
+        margin-left: -11%;
+    }
+    .outdoor-racks-section .content-container {
+        margin-left: 1%;
+    }
+    .outdoor-racks-section h1 {
+        font-size: 1.3rem;
+    }
+    .outdoor-racks-section p {
+        font-size: 0.75rem;
+    }
+    .outdoor-racks-section img {
+        width: 70%;
+    }
+}

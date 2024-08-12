@@ -1,0 +1,596 @@
+body {
+    font-family: "Pontano Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    overflow-x: hidden;
+}
+#products{    
+    background-color: #1b1b1b;
+    color: #fff;
+}
+#products h2{
+    font-size: 60px;
+    font-weight: 500;
+    text-align: center;
+}
+.products-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 34px;
+    padding: 10px 8px;
+
+}
+
+/* product-info section */
+.product-info {
+    padding: 50px 20px;
+}
+
+.product-info h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #8BC34A; /* Green underline */
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-left: 7%;
+}
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.feature {
+    font-size: 1.1rem;
+    font-weight: 600;
+    max-width: 300px; /* Max width for each feature */
+    flex: 1 1 30%; /* Flexbox to allow wrapping */
+    min-width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left: 2px solid #8BC34A; /* Green line on the left */
+}
+
+/* Standards & Compliances Section */
+.standards-compliances {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.standards-compliances h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    border-bottom: 4px solid #8BC34A; /* Green underline */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.compliances-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.compliance-item {
+    text-align: center;
+    flex: 1 1 45%; /* Adjust as needed */
+    min-width: 200px;
+}
+
+.compliance-item img {
+    max-width: 100px;
+    height: auto;
+    border-bottom: 4px solid #8BC34A;
+    margin-left: 42%;
+}
+
+.compliance-item h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+.compliance-item p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+/* Network Cabinets Section */
+.network-cabinets {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.network-cabinets h1 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    border-top: 4px solid #8BC34A;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.features-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-item {
+    text-align: left;
+    flex: 1 1 30%; /* Adjust as needed */
+    min-width: 250px;
+    padding: 20px;
+    box-sizing: border-box;
+   
+}
+
+.feature-item h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.feature-item img{
+    width: 55%;
+}
+.additional-features {
+    font-size: 0.8rem;
+    margin-top: 30px;
+    color: #555;
+    font-weight: bold;
+}
+
+/* Technical Data Section */
+.technical-data {
+    text-align: center;
+    padding: 50px 20px;
+   
+}
+
+.technical-data img {
+        width: 30%;
+        transform: translateX(-101%);
+       
+}
+    
+
+
+.technical-data h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: -5px;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-right: 64%;
+
+}
+
+.technical-data-table {
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+    margin-right: 20%;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 2px solid #000;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.table-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0; /* Light grey underline */
+}
+
+.table-cell {
+    flex: 1;
+    padding: 5px 10px;
+    text-align: left;
+}
+
+.table-row .table-cell {
+    border-bottom: 1px solid #e0e0e0; /* Light grey underline */
+}
+/* smart-rack */
+#smart-rack {
+    padding: 50px 20px;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    transition: gap 0.3s ease-in-out;
+}
+
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transition: all 0.3s ease-in-out;
+}
+
+#smart-rack h2 {
+    font-size: 27px;
+    font-weight: bold;
+    transition: font-size 0.3s ease-in-out;
+}
+
+#smart-rack h1 {
+    font-size: 50px;
+    margin-left: 9%;
+    transition: font-size 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+.cable-class p {
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+    transition: font-size 0.3s ease-in-out, width 0.3s ease-in-out;
+}
+
+.cable-con-2 {
+    margin-top: 5%;
+    font-size: 20px;
+    transition: margin-top 0.3s ease-in-out, font-size 0.3s ease-in-out;
+}
+
+.cable-class img {
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+    border-radius: 10px; /* Slight rounding of the edges */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow for the image */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+}
+
+.cable-class img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.cable-btn {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+    transition: margin-top 0.3s ease-in-out;
+}
+
+.cable-btn a {
+    background-color: #000; /* Button background */
+    color: #fff; /* Button text color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.cable-btn a:hover {
+    background-color: #444; /* Darker background on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+/* server-rack */
+#server-rack{
+    padding: 50px 20px;
+   
+    background-color: #1b1b1b;
+    color: #fff;
+}
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#server-rack h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+#server-rack  h1{
+    font-size: 50px;
+    margin-left: 9%;
+}
+
+.cable-class p{
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+}
+.cable-con-2 {
+    margin-top: 5%;
+}
+.cable-con-2 {
+    font-size: 20px;
+}
+.cable-class img{
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+}
+.cable-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+
+/* data-centre-rack */
+#data-centre-rack{
+    padding: 50px 20px;
+   
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#data-centre-rack h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+#data-centre-rack  h1{
+    font-size: 50px;
+    margin-left: 9%;
+}
+
+.cable-class p{
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+}
+.cable-con-2 {
+    margin-top: 5%;
+}
+.cable-con-2 {
+    font-size: 20px;
+}
+.cable-class img{
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+}
+.cable-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+/* cctv  */
+#cctv{
+    padding: 50px 20px;
+   
+    background-color: #1b1b1b;
+    color: #fff;
+}
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#cctv h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+#cctv  h1{
+    font-size: 50px;
+    margin-left: 9%;
+}
+
+.cable-class p{
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+}
+.cable-con-2 {
+    margin-top: 5%;
+}
+.cable-con-2 {
+    font-size: 20px;
+}
+.cable-class img{
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+}
+.cable-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+/* outdoor-telecom */
+#outdoor-telecom{
+    padding: 50px 20px;
+   
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#outdoor-telecom h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+#outdoor-telecom h1{
+    font-size: 50px;
+    margin-left: 9%;
+}
+
+.cable-class p{
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+}
+.cable-con-2 {
+    margin-top: 5%;
+}
+.cable-con-2 {
+    font-size: 20px;
+}
+.cable-class img{
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+}
+.cable-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+/*  optical-fibre*/
+#optical-fibre{
+    padding: 50px 20px;
+   
+    background-color: #1b1b1b;
+    color: #fff;
+}
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#optical-fibre h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+#optical-fibre  h1{
+    font-size: 50px;
+    margin-left: 9%;
+}
+
+.cable-class p{
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+}
+.cable-con-2 {
+    margin-top: 5%;
+}
+.cable-con-2 {
+    font-size: 20px;
+}
+.cable-class img{
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+}
+.cable-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
+
+/* hdpe-pld */
+#hdpe-plb{
+    padding: 50px 20px;
+   
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+}
+.cable-class {
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+}
+.cable-right-class {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+#hdpe-plb h2 {
+    font-size: 27px;
+    font-weight: bold;
+}
+#hdpe-plb  h1{
+    font-size: 50px;
+    margin-left: 9%;
+}
+
+.cable-class p{
+    text-align: justify;
+    width: 90%;
+    font-size: 20px;
+}
+.cable-con-2 {
+    margin-top: 5%;
+}
+.cable-con-2 {
+    font-size: 20px;
+}
+.cable-class img{
+    margin-left: 5%;
+    width: 33%;
+    height: 37vh;
+    margin-top: 9%;
+}
+.cable-btn{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 6%;
+}
