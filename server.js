@@ -7,6 +7,10 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Serve static files from the root directory
+app.use(express.static(path.join(__dirname)));
+
+
 app.post('/submit-chatbot', async (req, res) => {
     const { name, productHelp, email, contactNumber } = req.body;  // Correct the destructured field
 
@@ -14,15 +18,15 @@ app.post('/submit-chatbot', async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'shakthi.amarnath@gmail.com',
-            pass: 'runv edds mmlf avmc'  // Handle this securely
+            user: 'santoshoff4@gmail.com',
+            pass: 'neqx hgka egfa qeni'  // Handle this securely
         }
     });
 
     const mailOptions = {
-        from: 'shakthi.amarnath@gmail.com',
-        to: 'shakthi.amarnath@gmail.com',
-        subject: 'Chatbot Form Submission',
+        from: 'santoshoff4@gmail.com',
+        to: 'santoshoff4@gmail.com',
+        subject: 'Product Enquiry',
         text: `Name: ${name}\nProduct Help: ${productHelp.join(', ')}\nEmail: ${email}\nContact: ${contactNumber}`
     };
 
@@ -39,6 +43,12 @@ app.post('/submit-chatbot', async (req, res) => {
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
+
+// Fallback to index.html for any routes not handled
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
 
 // Start the server
 app.listen(3000, () => {
