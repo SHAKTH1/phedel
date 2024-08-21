@@ -1,5 +1,4 @@
 
-
 document.addEventListener('DOMContentLoaded', () => {
 
 
@@ -224,4 +223,14 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
     }
     
 })();
+window.addEventListener('load', function() {
+    const hoverMessage = document.getElementById('hover-message');
+    setTimeout(() => {
+        hoverMessage.classList.add('visible');
+    }, 500); // Adjust the delay as necessary
+});
+
+
+
+
 });

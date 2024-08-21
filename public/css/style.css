@@ -592,6 +592,7 @@ ul {
 /* line 14, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .main_menu .navbar {
   padding: 0px;
+  margin-left: 3%;
 }
 
 /* line 18, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
@@ -769,7 +770,7 @@ ul {
   width: 100%;
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   top: 0;
-  background-color: #00ff660d;;
+  background-color:green;
 }
 
 /* line 179, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
@@ -2168,7 +2169,7 @@ ul {
 }
 
 .contt {
-  background-color: green;
+  background-color: #f8f9fa;;
   color: black;
   border: none;
   padding: 10px 20px;
@@ -2179,6 +2180,7 @@ ul {
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
   text-decoration: none; /* Prevent underline or text highlight */
+  margin-right: 2%;
 }
 
 .contt:hover {
@@ -2394,6 +2396,18 @@ ul {
 }
 }
 
+.bottom-inf {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 960px) {
+  .bottom-inf {
+    grid-template-columns: repeat(2, 1fr); /* or any other configuration you want for larger screens */
+  }
+}
+
 /* Tablet styles */
 @media (max-width: 991px) {
   #our-vision, #our-founder {
@@ -2523,7 +2537,7 @@ ul {
 
 .bottom-inf {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr !important;
   gap: 10px;
 }
 }
@@ -2933,7 +2947,7 @@ ul {
 .bottom-inf{
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Space between headdd1 and headdd2 */
+  justify-content: space-between; 
   width: 100%;
   gap: 30px;
 }
@@ -3030,6 +3044,9 @@ ul {
   margin-left: 17%;
   padding-bottom: 12%;
 }
+
+
+
 /* contact us */
 #contact{
   height: auto;
@@ -3042,12 +3059,74 @@ ul {
 display: flex;
 }
 .contact-info{
+display: flex;
   color: white;
   margin-bottom: 25px;
   margin-top: 9%;
   font-size: 31px;
 
 }
+
+
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.left-container
+ {
+  flex: 1;
+    text-align: left;
+    margin-left: -15%;
+    margin-top: -35%;
+}
+
+.right-container{
+  margin-right: -28%;
+  width: 73%;
+  margin-top: -27%;
+}
+
+.left-container h2,
+.right-container h2 {
+  font-size: 45px;
+  margin-bottom: 5px;
+}
+
+.left-container p,
+.right-container p {
+  line-height: 1.5;
+  font-size: 24px;
+}
+
+.green-link {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.green-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+  }
+
+  .left-container,
+  .right-container {
+      margin: 0 auto 20px auto;
+  }
+}
+
+
 .contact1{
   text-align: left;
   padding-top: 2%;
@@ -3058,7 +3137,7 @@ display: flex;
   font-size: 45px;
 }
 .contact1 h1{
-  font-size: 20px;
+  font-size: 25px;
 
 }
 .left-image1{
@@ -5425,40 +5504,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 10px;
 }
 
-/*=================== contact banner start ====================*/
-/* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-info {
-  margin-bottom: 25px;
-}
-
-/* line 6, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-info__icon {
-  margin-right: 20px;
-}
-
-/* line 9, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-info__icon i, .contact-info__icon span {
-  color: #8f9195;
-  font-size: 27px;
-}
-
-/* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-info .media-body h3 {
-  font-size: 16px;
-  margin-bottom: 0;
-  font-size: 16px;
-  color: #2a2a2a;
-}
-
-/* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-info .media-body h3 a:hover {
-  color: #ff0000;
-}
-
-/* line 29, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-info .media-body p {
-  color: #8a8a8a;
-}
 
 /*=================== contact banner end ====================*/
 /*=================== contact form start ====================*/
