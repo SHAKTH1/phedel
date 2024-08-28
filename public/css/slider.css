@@ -1,0 +1,111 @@
+.banner_part {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel-image {
+    height: 100vh;
+    object-fit: cover;
+    animation: zoom 10s ease-in-out infinite;
+    opacity: 0;
+    transform: scale(1);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.carousel-item.active .carousel-image {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Added background fade effect */
+.carousel-item {
+    transition: background-color 1.5s ease-in-out, transform 1.5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.5) !important; /* Faded background color */
+}
+
+.carousel-inner {
+    position: relative;
+    height: 100%;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    animation: fadeInRight 2s forwards, slideUp 2s forwards;
+    animation-delay: 1s;
+}
+
+.carousel-caption h5 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: transform 1s ease-in-out, color 1s ease-in-out; /* Added transition to text */
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    transition: transform 1s ease-in-out, color 1s ease-in-out; /* Added transition to text */
+}
+
+@keyframes fadeInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.carousel-item.active .carousel-caption {
+    opacity: 1;
+    transform: translateY(0); /* Makes sure text slides into place */
+}
+
+.carousel-caption:hover h5, 
+.carousel-caption:hover p {
+    color: green; /* Change text color on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+@media (max-width: 768px) {
+    .carousel-caption h5 {
+        font-size: 2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 1.2rem;
+    }
+}

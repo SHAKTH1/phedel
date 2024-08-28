@@ -16,6 +16,9 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
     });
 });
 
+
+// chatbox
+
 (function () {
     const chatbotHTML = `
         <button id="chatbot-launch-btn" class="fixed bottom-5 right-5 bg-indigo-500 rounded-full w-14 h-14 flex items-center justify-center shadow-lg hover:bg-indigo-600 transition-colors duration-300">
@@ -27,11 +30,18 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
         <div id="chatbot-modal" class="fixed bottom-24 right-5 w-80 bg-white rounded-lg shadow-2xl flex flex-col transition-all duration-300 ease-in-out transform translate-y-full opacity-0 invisible">
             <div class="bg-indigo-500 text-white px-4 py-3 rounded-t-lg flex justify-between items-center">
                 <h4 class="font-semibold">Chatbot</h4>
-                <button id="chatbot-close-btn" class="text-white hover:text-gray-200 transition-colors duration-300">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
+                <div class="flex items-center space-x-2">
+                    <button id="chatbot-restart-btn" class="text-white hover:text-gray-200 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4V1M4.93 4.93l1.42-1.42M1 12h3m16 0h3m-2.93 7.07l1.42 1.42M12 23v-3m7.07-7.07l1.42 1.42M21 12a9 9 0 11-9-9"/>
+                        </svg>
+                    </button>
+                    <button id="chatbot-close-btn" class="text-white hover:text-gray-200 transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
             <div id="chatbot-message-container" class="flex-grow overflow-y-auto p-4 space-y-2" style="max-height: 300px;">
                 <!-- Chat messages will be appended here -->
@@ -55,6 +65,7 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
     const chatbotLaunchBtn = document.getElementById('chatbot-launch-btn');
     const chatbotModal = document.getElementById('chatbot-modal');
     const chatbotCloseBtn = document.getElementById('chatbot-close-btn');
+    const chatbotRestartBtn = document.getElementById('chatbot-restart-btn');
     const chatbotInput = document.getElementById('chatbot-input');
     const chatbotSendBtn = document.getElementById('chatbot-send-btn');
     const chatbotMessageContainer = document.getElementById('chatbot-message-container');
@@ -67,18 +78,28 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
         chatbotModal.classList.toggle('opacity-0');
         chatbotModal.classList.toggle('invisible');
         if (step === 0) {
-            setTimeout(() => {
-                addMessage("Hi, welcome to Phedel! I am a virtual bot available for your service.", false);
-                setTimeout(() => {
-                    addMessage("What is your name?");
-                    step++;
-                }, 1000);
-            }, 300);
+            startConversation();
         }
+    }
+
+    function startConversation() {
+        chatbotMessageContainer.innerHTML = ''; // Clear previous messages
+        step = 0; // Reset the step counter
+        userInfo = {}; // Clear user info
+
+        setTimeout(() => {
+            addMessage("Hello, welcome to Phedel! I am Powertronix available for your service.", false);
+            setTimeout(() => {
+                addMessage("Are you willing to provide your basic details?");
+                addOptions(["Sure!", "No thank you."]);
+                step++;
+            }, 1000);
+        }, 300);
     }
 
     chatbotLaunchBtn.addEventListener('click', toggleChatbot);
     chatbotCloseBtn.addEventListener('click', toggleChatbot);
+    chatbotRestartBtn.addEventListener('click', startConversation);
 
     function addMessage(content, isUser = false) {
         const messageDiv = document.createElement('div');
@@ -86,50 +107,51 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
         messageDiv.textContent = content;
         chatbotMessageContainer.appendChild(messageDiv);
         chatbotMessageContainer.scrollTop = chatbotMessageContainer.scrollHeight;
+
+        // Add a smooth transition
+        messageDiv.style.opacity = '0';
+        messageDiv.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            messageDiv.style.opacity = '1';
+            messageDiv.style.transform = 'translateY(0)';
+            messageDiv.style.transition = 'all 0.3s ease';
+        }, 50);
     }
 
-    function addCheckboxes(options) {
-        const checkboxWrapper = document.createElement('div');
-        checkboxWrapper.className = "mr-auto bg-gray-100 rounded-lg p-2 max-w-[80%] animate-fadeIn";
-
-        const instructionText = document.createElement('p');
-        instructionText.textContent = "Select one or more options:";
-        checkboxWrapper.appendChild(instructionText);
+    function addOptions(options) {
+        const optionsWrapper = document.createElement('div');
+        optionsWrapper.className = "mr-auto bg-gray-100 rounded-lg p-2 max-w-[80%] animate-fadeIn";
 
         options.forEach(optionText => {
-            const label = document.createElement('label');
-            label.className = "block mt-2";
+            const optionButton = document.createElement('button');
+            optionButton.textContent = optionText;
+            optionButton.className = "block bg-indigo-500 text-white px-4 py-2 rounded-lg mt-2 hover:bg-indigo-600 transition-colors duration-300";
 
-            const checkbox = document.createElement('input');
-            checkbox.type = 'checkbox';
-            checkbox.value = optionText;
-            checkbox.className = "mr-2";
-
-            label.appendChild(checkbox);
-            label.appendChild(document.createTextNode(optionText));
-            checkboxWrapper.appendChild(label);
+            optionButton.addEventListener('click', () => handleOptionSelect(optionText));
+            optionsWrapper.appendChild(optionButton);
         });
 
-        chatbotMessageContainer.appendChild(checkboxWrapper);
+        chatbotMessageContainer.appendChild(optionsWrapper);
         chatbotMessageContainer.scrollTop = chatbotMessageContainer.scrollHeight;
 
-        const submitButton = document.createElement('button');
-        submitButton.textContent = 'Submit';
-        submitButton.className = "bg-indigo-500 text-white px-4 py-2 rounded-lg mt-2 hover:bg-indigo-600 transition-colors duration-300";
-        checkboxWrapper.appendChild(submitButton);
+        // Add a smooth transition
+        optionsWrapper.style.opacity = '0';
+        optionsWrapper.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            optionsWrapper.style.opacity = '1';
+            optionsWrapper.style.transform = 'translateY(0)';
+            optionsWrapper.style.transition = 'all 0.3s ease';
+        }, 50);
+    }
 
-        submitButton.addEventListener('click', () => {
-            const selectedOptions = Array.from(checkboxWrapper.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
-            if (selectedOptions.length > 0) {
-                userInfo.productHelp = selectedOptions;
-                chatbotMessageContainer.removeChild(checkboxWrapper);
-                addMessage(`Selected: ${selectedOptions.join(', ')}`, true);
-                setTimeout(() => {
-                    addMessage("Please provide your email:");
-                    step++;
-                }, 1000);
-            }
-        });
+    function handleOptionSelect(option) {
+        if (option === "Sure!") {
+            step++;
+            addMessage("Please provide your name:", false);
+        } else if (option === "No thank you.") {
+            addMessage("Thank you for choosing Phedel. Have a wonderful day!", false);
+            step = 99; // End conversation
+        }
     }
 
     function handleSend() {
@@ -141,46 +163,90 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
         }
     }
 
-   
     function handleStep(message) {
-        if (step === 1) {
+        if (step === 2) {
             userInfo.name = message;
             setTimeout(() => {
-                addMessage("What product help do you require? (You can select multiple options)");
-                addCheckboxes([
-                    "HDPE PLB Duct Pipes",
-                    "Optical Fibre Accessories",
-                    "Outdoor Telecom Products",
-                    "CCTV Racks",
-                    "Server Racks",
-                    "Smart Racks",
-                    "Other Services"
-                ]);
+                addMessage("Please provide your phone number:", false);
                 step++;
             }, 1000);
         } else if (step === 3) {
-            if (validateEmail(message)) {
-                userInfo.email = message;
-                setTimeout(() => {
-                    addMessage("Please provide your contact number:");
-                    step++;
-                }, 1000);
-            } else {
-                addMessage("Please enter a valid email address.");
-            }
-        } else if (step === 4) {
             if (validatePhoneNumber(message)) {
                 userInfo.contactNumber = message;
                 setTimeout(() => {
-                    addMessage(`Thank you, ${userInfo.name}. Our customer service team will soon contact you.`);
-                    console.log("User Info:", userInfo);
-                    submitResponses(userInfo);  // <-- Call the function here
+                    addMessage("Please provide your email:", false);
                     step++;
                 }, 1000);
             } else {
-                addMessage("Please enter a valid contact number.");
+                addMessage("Invalid phone number. Please enter a valid 10-digit number.", false);
+            }
+        } else if (step === 4) {
+            if (validateEmail(message)) {
+                userInfo.email = message;
+                setTimeout(() => {
+                    addMessage("What product can we help you with?", false);
+                    addCheckboxOptions([ "HDPE PLB Duct Pipes", "Optical Fibre Accessories",
+                            "Outdoor Telecom Products",
+                            "CCTV Racks",
+                            "Server Racks",
+                            "Smart Racks",
+                            "Other Services"]);
+                    step++;
+                }, 1000);
+            } else {
+                addMessage("Invalid email. Please enter a valid email address.", false);
             }
         }
+    }
+
+    function addCheckboxOptions(options) {
+        const checkboxWrapper = document.createElement('div');
+        checkboxWrapper.className = "mr-auto bg-gray-100 rounded-lg p-2 max-w-[80%] animate-fadeIn";
+
+        options.forEach(optionText => {
+            const checkboxLabel = document.createElement('label');
+            checkboxLabel.className = "block mt-2";
+
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.value = optionText;
+            checkbox.className = 'mr-2';
+
+            checkboxLabel.appendChild(checkbox);
+            checkboxLabel.appendChild(document.createTextNode(optionText));
+            checkboxWrapper.appendChild(checkboxLabel);
+        });
+
+        const submitButton = document.createElement('button');
+        submitButton.textContent = "Submit";
+        submitButton.className = "block bg-indigo-500 text-white px-4 py-2 rounded-lg mt-2 hover:bg-indigo-600 transition-colors duration-300";
+        checkboxWrapper.appendChild(submitButton);
+
+        chatbotMessageContainer.appendChild(checkboxWrapper);
+        chatbotMessageContainer.scrollTop = chatbotMessageContainer.scrollHeight;
+
+        submitButton.addEventListener('click', () => {
+            const selectedOptions = Array.from(checkboxWrapper.querySelectorAll('input[type="checkbox"]:checked')).map(checkbox => checkbox.value);
+            if (selectedOptions.length > 0) {
+                userInfo.productHelp = selectedOptions;
+                chatbotMessageContainer.removeChild(checkboxWrapper);
+                addMessage(`Selected: ${selectedOptions.join(', ')}`, true);
+                setTimeout(() => {
+                    addMessage("Thank you so much, our customer representative will contact you soon.", false);
+                    submitResponses(userInfo);
+                    step = 99; // End conversation
+                }, 1000);
+            }
+        });
+
+        // Add a smooth transition
+        checkboxWrapper.style.opacity = '0';
+        checkboxWrapper.style.transform = 'translateY(20px)';
+        setTimeout(() => {
+            checkboxWrapper.style.opacity = '1';
+            checkboxWrapper.style.transform = 'translateY(0)';
+            checkboxWrapper.style.transition = 'all 0.3s ease';
+        }, 50);
     }
 
     function validateEmail(email) {
@@ -201,7 +267,6 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
         }
     });
 
-
     function submitResponses(userInfo) {
         fetch('/submit-chatbot', {
             method: 'POST',
@@ -209,10 +274,10 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                name: userInfo.name,            // Use userInfo object
-                productHelp: userInfo.productHelp,  // Use userInfo object
-                email: userInfo.email,          // Use userInfo object
-                contactNumber: userInfo.contactNumber // Use userInfo object
+                name: userInfo.name,
+                productHelp: userInfo.productHelp,
+                email: userInfo.email,
+                contactNumber: userInfo.contactNumber
             })
         }).then(response => response.json())
           .then(data => {
@@ -221,8 +286,8 @@ document.querySelectorAll('.products-list a').forEach(anchor => {
               console.error('Error:', error);
           });
     }
-    
 })();
+
 window.addEventListener('load', function() {
     const hoverMessage = document.getElementById('hover-message');
     setTimeout(() => {

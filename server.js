@@ -18,14 +18,14 @@ app.post('/submit-chatbot', async (req, res) => {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'santoshoff4@gmail.com',
-            pass: 'neqx hgka egfa qeni'  // Handle this securely
+            user: 'shakthi.amarnath@gmail.com',
+            pass: 'leot sigm nvur fgou'  // Handle this securely
         }
     });
 
     const mailOptions = {
-        from: 'santoshoff4@gmail.com',
-        to: 'santoshoff4@gmail.com',
+        from: 'shakthi.amarnath@gmail.com',
+        to: 'shakthi.amarnath@gmail.com',
         subject: 'Product Enquiry',
         text: `Name: ${name}\nProduct Help: ${productHelp.join(', ')}\nEmail: ${email}\nContact: ${contactNumber}`
     };
@@ -36,6 +36,34 @@ app.post('/submit-chatbot', async (req, res) => {
     } catch (error) {
         console.error('Error sending email:', error);
         res.status(500).json({ error: 'Failed to send email.' });
+    }
+});
+
+app.post('/send-email', async (req, res) => {
+    const { email, name, message } = req.body;
+
+    // Set up the email transport configuration
+    const transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'shakthi.amarnath@gmail.com',
+            pass: 'leot sigm nvur fgou'  // Handle this securely
+        }
+    });
+
+    const mailOptions = {
+        from: 'shakthi.amarnath@gmail.com',
+        to: 'shakthi.amarnath@gmail.com',
+        subject: `Contact Form Submission: ${name}`,
+        text: `Email: ${email}\n\nMessage:\n${message}`
+    };
+
+    try {
+        await transporter.sendMail(mailOptions);
+        res.status(200).json({ success: true });
+    } catch (error) {
+        console.error('Error sending email:', error);
+        res.status(500).json({ success: false, error: 'Failed to send email.' });
     }
 });
 

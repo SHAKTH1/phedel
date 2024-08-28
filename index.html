@@ -1,48 +1,61 @@
 <!doctype html>
 <html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Phedel</title>
+     
+        
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Phedel</title>
-    <!-- <link rel="icon" href="img/favicon.png"> -->
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="public/css/bootstrap.min.css">
-    <!-- animate CSS -->
-    <link rel="stylesheet" href="public/css/animate.css">
-    <!-- owl carousel CSS -->
-    <link rel="stylesheet" href="public/css/owl.carousel.min.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="public/css/all.css">
-    <!-- flaticon CSS -->
-    <link rel="stylesheet" href="public/css/flaticon.css">
-    <link rel="stylesheet" href="public/css/themify-icons.css">
-    <!-- font awesome CSS -->
-    <link rel="stylesheet" href="public/css/magnific-popup.css">
-    <!-- swiper CSS -->
-    <link rel="stylesheet" href="css/slick.css">
-    <!-- style CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    
+        <!-- Bootstrap CSS (Bootstrap 4 for grid and basic styling) -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        
+      <!-- Flowbite CSS (Tailwind-based component library)  -->
+      <!-- <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" /> -->
+    
+        <!-- Other third-party libraries -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css"> 
+    
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet"> 
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <!--  Your Custom Styles -->
+        <link rel="stylesheet" href="public/css/style.css">
+        <link rel="stylesheet" href="public/css/slider.css">
+        
+        <!-- Other custom and third-party CSS files -->
+        <link rel="stylesheet" href="public/css/bootstrap.min.css">
+         <link rel="stylesheet" href="public/css/animate.css">
+        <link rel="stylesheet" href="public/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="public/css/all.css">
+        <link rel="stylesheet" href="public/css/flaticon.css">
+        <link rel="stylesheet" href="public/css/themify-icons.css">
+        <link rel="stylesheet" href="public/css/magnific-popup.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="slider.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+       
+    </head>
     
 
-</head>
-
 <body>
+    <div id="page-loader">
+        <img src="./public/images/phedel.png" alt="Loading...">
+    </div>
     <div class="body_bg">
         <!--::header part start::-->
         <header class="main_menu single_page_menu">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg navbar-light">
+                        <nav class="navbar custom-navbar navbar-expand-lg navbar-light">
                             <a class="navbar-brand" href="index.html"> 
                                 <img src="/images/phedel.png" alt="logo"> 
                             </a>
@@ -66,6 +79,9 @@
                                     <li class="nav-item">
                                         <a class="nav-link" href="./product.html">PRODUCTS</a>
                                     </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="./teams.html">TEAMS</a>
+                                    </li>
                                 </ul>
                             </div>
                             <a href="#contact" class="contt">CONTACT US</a>
@@ -76,34 +92,63 @@
         </header>
                <!-- Header part end-->
 
-        <!-- banner part start-->
-        <section class="banner_part">
-            <div class="container">
-                <div class="row align-items-center justify-content-between">
-                    <div class="col-lg-6 col-md-8">
-                        <div class="banner_text">
-                            <div class="banner_text_iner">
-                                <h1>Manufacturing the Future's Finest Products</h1>
-                            </div>
+<!-- banner part start -->
+
+         <!-- <section class="banner_part">
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="5000">
+                        <img src="public/images/datacenter-hd.jpg" class="d-block w-100 carousel-image" alt="Data Center Solutions">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Data Center Solutions</h5>
+                            <p>State-of-the-art data centers for your business needs.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="public/images/tele-tower-hd.jpg" class="d-block w-100 carousel-image" alt="Telecommunication Towers">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Telecommunication Towers</h5>
+                            <p>Reliable communication infrastructures across the globe.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="5000">
+                        <img src="public/images/solarcells.jpg" class="d-block w-100 carousel-image" alt="HDPE Pipes">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>HDPE Pipes</h5>
+                            <p>Durable and flexible piping solutions for various applications.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- banner part start-->
-
-
+        
+       -->
+        <section id="banner-part">
+            <ul class="slideshow">
+                <li><span>Image 01</span><div><h3>Manufacturing the Future's Finest Products</h3></div></li>
+                <li><span>Image 02</span><div><h3>Manufacturing the Future's Finest Products</h3></div></li>
+                <li><span>Image 03</span><div><h3>Manufacturing the Future's Finest Products</h3></div></li>
+                <li><span>Image 04</span><div><h3>Manufacturing the Future's Finest Products</h3></div></li>
+                <li><span>Image 05</span><div><h3>Manufacturing the Future's Finest Products</h3></div></li>
+                <li><span>Image 06</span><div><h3>Manufacturing the Future's Finest Products</h3></div></li>
+              </ul>
+                <div class="container">
+                  <!-- <header>
+                    <h1>CSS3 <span>Fullscreen Slideshow</span></h1>
+                </header> -->
+              </div>
+        </section>
 
         <!-- about_us part start-->
 
         <section id= "about" class="about_us section_padding">
             
-                <img class="left-image"src="/images/Group 7.png">
+                <img class="left-image" src="./public/images/Group 7.png" loading="lazy">
             
             <div class="containeer">
                 <div class="abt" >
                 <h1 text-align="center">ABOUT US</h1> 
-                <p>PHEDEL<br>The latest venture from Startronix Modular Systems,<br> is here to revolutionize high- end manufacturing in India.</p>
+                <p>PHEDEL<br>The latest venture from Startronix Systems,<br> is here to revolutionize high- end manufacturing in India.</p>
             </div>
                
                
@@ -111,30 +156,30 @@
                
                         <div class="about_us_text">
                             <div class="feature1">
-                                <h3 style="margin: 0; padding: 0; text-align: left;">25 YEARS</h3>
+                                <h3 style="margin: 0; padding: 0; text-align: center;">25 YEARS</h3>
 
                                 <ul>
                                 <li>With innovation, quality, and craftsmanship at the core of our DNA, PHEDEL embodies the spirit of excellence that has been the hallmark of Startronix for over 25 years.</li>
                                 </ul>
                             </div>
                             <div class="feature1">
-                                <h3 style="margin: 0; padding: 0; text-align: left;">Since 1999</h3>
+                                <h3 style="margin: 0; padding: 0; text-align: center;">Since 1999</h3>
 
                                 <ul>
-                                <li>With innovation, quality, and craftsmanship at the core of our DNA, PHEDEL embodies the spirit of excellence that has been the hallmark of Startronix for over 25 years.</li>
+                                <li>Rooted in the heart of Bengaluru since 1999, our parent company has consistently set the industry standard in Telecom, Datacenter, and Power Industry for Sheet Metal Fabrication.</li>
                                 </ul>
                             </div>
                             <div class="feature1">
-                                <h3 style="margin: 0; padding: 0; text-align: left;">With 120,000 sqft</h3>
+                                <h3 style="margin: 0; padding: 0; text-align: center;">With 2,00,000 sqft</h3>
 
                                 <ul>
-                                <li>With innovation, quality, and craftsmanship at the core of our DNA, PHEDEL embodies the spirit of excellence that has been the hallmark of Startronix for over 25 years.</li>
+                                <li> With a sprawling 2,00,000 sqft state-of-the-art manufacturing facility, we have built a legacy of innovation and unparalleled quality.</li>
                                 </ul>
                             </div>
                       </div>
                 </div>
                 
-                    <img  class="right-image" src="/images/Group 6.png">
+                    <img  class="right-image" src="/images/Group 6.png" loading="lazy">
                 
         </section>
         <!-- about_us part end-->
@@ -144,23 +189,29 @@
             <div class="container-vis">
                <div class="left-con">
                 <h1 text-align="center">OUR VISION</h1>
-                <p >To be the Leading Manufacturer of High-End Products in India</p>
-                <p>Whether you are looking to build the next groundbreaking product or require top-of-the-line 
-                    solutions, PHEDEL is your partner in excellence, where your vision meets our expertise, and together, we create products that shape the future.</p>
+                <p >To be the Leading solution providers for DATA CENTERS, POWER SECTOR Products in India</p>
+                <p>At PHEDEL, we are dedicated to transforming your visionary ideas into exceptional products, either you're aiming to develop groundbreaking innovations or seeking superior solutions, our expertise and commitment ensure that together, we craft solutions that define the future.
+
+
+
+
+
+
+                </p>
                </div>
                <div class="right-con">
                 <div class="left-arrows-container">
-                    <img class="left-arrow3" src="./images/leftarrow.png" alt="arrow3">
-                    <img class="left-arrow3" src="./images/leftarrow.png" alt="arrow3">
-                    <img class="left-arrow3" src="./images/leftarrow.png" alt="arrow3">
+                    <img class="left-arrow3" src="./images/leftarrow.png" alt="arrow3" loading="lazy">
+                    <img class="left-arrow3" src="./images/leftarrow.png" alt="arrow3" loading="lazy">
+                    <img class="left-arrow3" src="./images/leftarrow.png" alt="arrow3" loading="lazy">
                 </div>
                 <div class="right-arrows-container">
-                  <img class="right-arrow" src="./images/rightarrow.png" alt="arrow">
-                  <img class="right-arrow" src="./images/rightarrow.png" alt="arrow">
+                  <img class="right-arrow" src="./images/rightarrow.png" alt="arrow" loading="lazy">
+                  <img class="right-arrow" src="./images/rightarrow.png" alt="arrow" loading="lazy">
     
                 </div>
                 <div class="left-arrow">
-                <img class="left-arrows1" src="./images/leftarrow.png" alt="arrow"></div>
+                <img class="left-arrows1" src="./images/leftarrow.png" alt="arrow" loading="lazy"></div>
                </div>
             </div>
         </section>
@@ -170,28 +221,33 @@
             <div class="container-fnd">
                <div class="left-con-fnd">
                 <div class="right-arrows-container-fnd">
-                    <img class="right-arrow" src="/images/rightarrow.png" alt="arrow">
-                    <img class="right-arrow" src="/images/rightarrow.png" alt="arrow">
-                    <img class="right-arrow" src="/images/rightarrow.png" alt="arrow">
+                    <img class="right-arrow" src="/images/rightarrow.png" alt="arrow" loading="lazy">
+                    <img class="right-arrow" src="/images/rightarrow.png" alt="arrow" loading="lazy">
+                    <img class="right-arrow" src="/images/rightarrow.png" alt="arrow" loading="lazy">
                 </div>
                 <div class="left-arrows-container-fnd">
-                  <img class="left-arrow-vis" src="/images/leftarrow.png">
-                  <img class="left-arrow-vis" src="/images/leftarrow.png">
+                  <img class="left-arrow-vis" src="/images/leftarrow.png" loading="lazy">
+                  <img class="left-arrow-vis" src="/images/leftarrow.png" loading="lazy">
                 </div>
                 <div class="right-arrow-last">
-                    <img class="right-arrows1" src="/images/rightarrow.png" alt="arrow"></div>
+                    <img class="right-arrows1" src="/images/rightarrow.png" alt="arrow" loading="lazy"></div>
                </div>
                <div class="right-con-fnd">
-                <h1 text-align="center">OUR FOUNDER</h1>
-                <p class="ppp">Shivaraj Mattigatti CEO, PHEDEL</p>
-                <p>Shivaraj Mattigatti serves as the dynamic CEO & Managing Director of Phedel & Startronix Modular Systems Pvt Ltd and is the proprietor of Paintel Manufacturing Inc. With a robust background spanning 17 years in the telecommunications and IT data centre industries, he has primarily focused on sales and product design. He founded Central Network Systems Inc in 2012, branching into manufacturing in Bangalore by 2014. In 2017, he acquired and merged with Startronix, ascending to the role of CEO/MD. Through his leadership, Startronix has evolved into an expansive 80,000 sqft state-of-the-art manufacturing facility, boasting a workforce of over 600 professionals engaged in a wide array of sectors including technology products</p>
-               </div>
+                <h1 style="text-align: center;">OUR FOUNDER</h1>
+                <div class="founder-info">
+                    <img class="founder-image" src="./public/images/phedellogo2.png" alt="Founder Image" loading="lazy">
+                    <div class="founder-details">
+                        <p class="ppp">Shivaraj Mattigatti, CEO, PHEDEL</p>
+                        <p>Shivaraj Mattigatti serves as the dynamic CEO & Managing Director of Phedel, Startronix Modular Systems Pvt Ltd, and Paintel Manufacturing Inc. With a robust background spanning 17 years in the telecommunications and IT data centre industries, he has primarily focused on sales and product design. He founded Central Network Systems Inc in 2012, branching into manufacturing in Bangalore by 2014. In 2017, he acquired and merged with Startronix, ascending to the role of CEO/MD. Through his leadership, Startronix has evolved into an expansive 2,00,000 sqft state-of-the-art manufacturing facility, boasting a workforce of over 600 professionals engaged in a wide array of sectors including technology products.</p>
+                    </div>
+                </div>
             </div>
+        </div>
         </section>
 
         
       <section id="hand-img">
-        <img src="./images/hand-img.png" alt="img">
+        <img src="./images/hand-img.png" alt="img" loading="lazy">
       </section> 
 
         
@@ -215,7 +271,7 @@
 
          
                       
-    <div class="silder-con">
+    <!-- <div class="silder-con">
 
         <div class="slide">
 
@@ -309,7 +365,289 @@
             <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
 
-    </div> 
+    </div>  -->
+
+       <!-- carousel -->
+       <div class="carousel">
+        <!-- list item -->
+        <div class="list">
+            <div class="item">
+                <img src="./public/images/service1.png">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Conceptual Design & Innovative </div>
+                    <div class="topic">Solution</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service2.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Material </div>
+                    <div class="topic">Management</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service3.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">CNC Laser Cutting </div>
+                    <div class="topic">Machines</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service4.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">CNC Punching</div>
+                    <div class="topic">Machine</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service5.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">CNC Bending</div>
+                    <div class="topic">Machine</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service6.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Power Press
+                         </div>
+                    <div class="topic">Machine</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service7.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <!-- <div class="title">Welding</div> -->
+                    <div class="topic">Welding</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service8.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Pretreatment </div>
+                    <div class="topic">Process </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service9.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Powder 
+                        </div>
+                    <div class="topic">Coating </div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service10.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Curing 
+                        </div>
+                    <div class="topic">Oven</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/servcie11.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <!-- <div class="title">Assembly </div> -->
+                    <div class="topic">Assembly</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service12.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Wiring
+                         </div>
+                    <div class="topic">Harness</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service13.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <div class="title">Electrical and  </div>
+                    <div class="topic">Electronics Assembly</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service14.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <!-- <div class="title">Conceptual Design & Innovative </div> -->
+                    <div class="topic">Packing</div>
+
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service15.jpg">
+                <div class="content">
+                    <div class="author">PHEDEL</div>
+                    <!-- <div class="title">Conceptual Design & Innovative </div> -->
+                    <div class="topic">Dispatch</div>
+
+                </div>
+            </div>
+        </div>
+        <!-- list thumnail -->
+        <div class="thumbnail">
+            <div class="item">
+                <img src="./public/images/service1.png">
+                <div class="content">
+                    <div class="title">
+                        Conceptual Design & Innovative
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service2.jpg">
+                <div class="content">
+                    <div class="title">
+                        Material Management
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service3.jpg">
+                <div class="content">
+                    <div class="title">
+                        CNC Laser Cutting Machines
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service4.jpg">
+                <div class="content">
+                    <div class="title">
+                        CNC Punching Machine
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service5.jpg">
+                <div class="content">
+                    <div class="title">
+                       CNC Bending Machines
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service6.jpg">
+                <div class="content">
+                    <div class="title">
+                        Power Press
+                        Machine
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service7.jpg">
+                <div class="content">
+                    <div class="title">
+                        Welding
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service8.jpg">
+                <div class="content">
+                    <div class="title">
+                        Pretreatment Process
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service9.jpg">
+                <div class="content">
+                    <div class="title">
+                        Powder 
+                        Coating
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service10.jpg">
+                <div class="content">
+                    <div class="title">
+                        Curing 
+                        Oven
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/servcie11.jpg">
+                <div class="content">
+                    <div class="title">
+                        Assembly
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service12.jpg">
+                <div class="content">
+                    <div class="title">
+                        Wiring
+                        Harness
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service13.jpg">
+                <div class="content">
+                    <div class="title">
+                        Electrical and Electronics Assembly
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service14.jpg">
+                <div class="content">
+                    <div class="title">
+                        Packing
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <img src="./public/images/service15.jpg">
+                <div class="content">
+                    <div class="title">
+                        Dispatch
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- next prev -->
+
+        <div class="arrows">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <!-- time running -->
+        <div class="time"></div>
+    </div>
+
     <div class="left-slider">
             <div class="container-green-line-bottom">
                 <img src="./images/green-line1.png">
@@ -321,49 +659,113 @@
 
 <!-- our hand image section -->
 <section id="warehouse-img">
-    <img src ="./images/warehouse_img.png"  alt="image">
+    <img src ="./images/warehouse_img.png"  alt="image" loading="lazy">
 </section>
  <!-- pricing part start-->
  <section id="our-infrastructure">
     <div class="container-inf">
     <div class ="inf">
         <h1> OUR INFRASTRUCTURE</h1>
-        <img class ="vector-line" src ="/images/vector-line.png">
-        <img class="imggg" src="./images/infra-info.png">
+        <img class ="vector-line-inf" src ="/images/vector-line.png" loading="lazy">
+        <!-- <img class="imggg" src="./images/infra-info.png"> -->
     </div>
-    <div class="bottom-inf">            
+    <div class ="imgg-text">
+        <h2> WE OPERATE ACCROSS</h2>
+        <h1>2 FACTORIES</h1>
+        <h2> WITH A VAST</h2>
+        <h1>2 LAKH SQFT</h1>
+        <h2> ADVANCED MANUFACTURING SPACE</h2>
+    </div>
+    <!-- <div class="bottom-inf">            
          <div class="headdd1">
-        <h1 class ="head1">Extensive Fabrication Capacity</h1>
+        <h1 class ="head1">Extensive Fabrication Capacity </h1>
         
-        <p> Monthly material conversion capacity reaches 3000 tons, with CNC laser cutting machines handling various materials such as mild steel (up to 20mm thickness), stainless steel (up to 15mm), and aluminium (up to 8mm).</p>
-        <h1 class ="head1">Robust Power Press Operations</h1>
+        <p> Monthly material conversion capacity reaches 3000 tons, with CNC laser cutting and advanced punching and bending machines handling various materials such as mild steel (up to 20mm thickness), stainless steel (up to 15mm), and aluminium (up to 8mm).</p>
+        
+        <h1 class ="head1">Surface Finishing and Coating</h1>
+        
+        <p>Operating 5 powder coating lines with a daily capacity of 12 tons of powder, offering 1600 color options for customized finishing.</p>
+        
+        
+        <h1 class="head1">Wiring Solutions</h1>
 
-        <p>With 10 power presses and 5 fastener insertion machines, they excel in metal shaping and forming, managing inserts up to 20mm.</p>
+        <p>Providing comprehensive wiring solutions for OEM applications, our services include the design and assembly of high-quality, customized wiring harnesses and assemblies. With a focus on precision and reliability, we support diverse OEM needs by delivering robust wiring solutions that ensure seamless integration and optimal performance in various electronic and electrical systems.</p>
+        
         <h1 class ="head1">Plastics Expertise</h1>
 
         <p> Equipped with 3 injection molding machines ranging from 120 to 450 tons, they specialize in manufacturing a wide range of plastic parts and HDPE ducts.</p>
      </div>
      <div class="headdd2">
-        <h1 class ="head2">Advanced Punching and Bending</h1>
+        <h1 class ="head2">Robust Power Press Operations</h1>
+
+        <p>With 10 power presses and 5 fastener insertion machines, they excel in metal shaping and forming, managing inserts up to 20mm.</p>
+        <h1 class="head2">Assembly</h1>
+
+        <p>Managing multiple assembly lines with a robust capacity for high-volume production, delivering precision and customization with a range of options tailored for original equipment manufacturers (OEMs). Our assembly services include flexible solutions to meet diverse OEM specifications, ensuring high-quality output and reliability for every product.</p>
         
-        <p>Monthly material conversion capacity reaches 3000 tons, with CNC laser cutting machines handling various materials such as mild steel (up to 20mm thickness), stainless steel (up to 15mm), and aluminium (up to 8mm)</p>
-        <h1 class ="head2">Surface Finishing and Coating</h1>
+        <h1 class="head2">Electrical and Electronics Assembly</h1>
         
-        <p>Operating 5 powder coating lines with a daily capacity of 12 tons of powder, offering 1600 color options for customized finishing.</p>
+        <p>Specializing in advanced electrical and electronics assembly with state-of-the-art technology, our OEM-focused services offer scalable solutions for complex assemblies. We provide precise assembly capabilities with rigorous quality control, meeting the specific needs of OEM partners and ensuring optimal performance and durability of electronic components.</p>
+        
         <h1 class ="head2">Air Filter Manufacturing</h1>
         
         <p>Capable of producing 400-500 air filters daily to meet engineering and retail demands.</p>
      </div>
     </div>
 
-     </div> 
+    </div>  -->
+    <div class="bottom-inf">            
+        <div class="tile">
+            <h1 class="head1">Extensive Fabrication Capacity</h1>
+            <p>Monthly material conversion capacity reaches 3000 tons, with CNC laser cutting and advanced punching and bending machines handling various materials such as mild steel (up to 20mm thickness), stainless steel (up to 15mm), and aluminium (up to 8mm).</p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head1">Robust Power Press Operations</h1>
+            <p>With 10 power presses and 5 fastener insertion machines, they excel in metal shaping and forming, managing inserts up to 20mm.</p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head1">Surface Finishing and Coating</h1>
+            <p>Operating 5 powder coating lines with a daily capacity of 12 tons of powder, offering 1600 color options for customized finishing.</p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head1">Assembly</h1>
+            <p>Managing multiple assembly lines with a robust capacity for high-volume production, delivering precision and customization with a range of options tailored for original equipment manufacturers (OEMs). Our assembly services include flexible solutions to meet diverse OEM specifications, ensuring high-quality output and reliability for every product.</p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head2">
+                Wiring Solutions</h1>
+            <p>Providing comprehensive wiring solutions for OEM applications, our services include the design and assembly of high-quality, customized wiring harnesses and assemblies. With a focus on precision and reliability, we support diverse OEM needs by delivering robust wiring solutions that ensure seamless integration and optimal performance in various electronic and electrical systems.
+
+            </p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head2">Electrical and Electronics Assembly</h1>
+            <p>Specializing in advanced electrical and electronics assembly with state-of-the-art technology, our OEM-focused services offer scalable solutions for complex assemblies. We provide precise assembly capabilities with rigorous quality control, meeting the specific needs of OEM partners and ensuring optimal performance and durability of electronic components.</p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head2">Plastics Expertise</h1>
+            <p>Equipped with 3 injection molding machines ranging from 120 to 450 tons, they specialize in manufacturing a wide range of plastic parts and HDPE ducts.</p>
+        </div>
+        
+        <div class="tile">
+            <h1 class="head2">Air Filter Manufacturing</h1>
+            <p>Capable of producing 400-500 air filters daily to meet engineering and retail demands.</p>
+        </div>
+    </div>
+    
 </section>
 
       
 <section id="whyphedel" aria-label="whyphedel">
    
     <h1 class="why">WHY PHEDEL</h1>
-    <img class="vector-line1" src="/images/vector-line.png">
+    <img class="vector-line1" src="/images/vector-line.png" loading="lazy">
  <div class="whyphedelup">
     
 
@@ -376,7 +778,7 @@
             Extensive Experience
           </h1>
           <span class="why-info-info">
-            25 years specializing in sheet metal manufacturing for Datacenter, Telecom, and Power sectors.
+            25 years specializing in solution providing, sourcing, expert engineering & manufacturing in Datacenter, Telecom, and Power sectors.
           </span>
       </div>
       <div class="grid-wrapper">
@@ -467,13 +869,17 @@
     <h1    class="syn-adv"> SYNERGISTIC ADVANCEMENTS</h1>
     <img class="vector-line2" src="/images/vector-line.png">
     <div class="syn-info">
-    <span >At PHEDEL, we leverage the extensive expertise and robust infrastructure of our parent company to set new benchmarks in the industry.<br> PHEDEL benefits from the extensive network and established partnerships of Startronix. We have liaisons with industry leaders and pioneers, ensuring that we stay at the forefront technological advancements.<br> Our strategic alliances, outreach team, and business intelligence engineering ensure that PHEDEL is always prepared for the future. We employ the best minds in the industry to foresee risks and develop strategies for risk mitigation, ensuring that every project is a success from start to finish.</span>
+    <span >At PHEDEL, we leverage the extensive expertise and robust infrastructure of our parent company to set new benchmarks in the industry.<br> PHEDEL benefits from the extensive network and established partnerships of Startronix. We have liaisons with industry leaders and pioneers, ensuring that we stay at the forefront technological advancements.<br> Our strategic alliances, outreach team, and business intelligence engineering ensure that PHEDEL is always prepared for the future. We employ the best minds in the industry to foresee risks and develop strategies for risk mitigation, ensuring that every project is a success from <strong >START TO FINISH.</strong></span>
+    <li>Conceptualization</li>
+    <li>Product Design</li>
+    <li>Fabrication</li>
+    <li>Delivery</li>
    
 </div>
 </div>
       
   </section>
-
+<!-- 
   <section id="contact"  aria-label="contact">
     <h1 class="contact1">CONTACT US</h1>
     <img class="vector-line3" src="/images/vector-line.png">
@@ -503,7 +909,51 @@
         <img  class="right-image1" src="/images/Group 6.png">
     </div>
     </div>
-  </section>
+  </section> -->
+
+  <section id="contactus">
+    <div class="com-contact">
+        <div class="left-add">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.1516994085023!2d77.54294670857279!3d13.026009987241334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d6c06ab8709%3A0xdd95ca90f1f0e3dd!2sM.E.I.!5e0!3m2!1sen!2sin!4v1724759879387!5m2!1sen!2sin" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="reachus">
+                <h1>Reach us?</h1>
+                <h2>Startonix India</h2>
+                <p>
+                    Business Development Manager<br>
+                    (+91) 96069 58072<br>
+                    <a href="mailto:support@phedelco.com">support@phedelco.com</a>
+                </p>
+            </div>
+            <div class="off-add">
+                <h2>PHEDEL ENTERPRISES INC.</h2>
+                <p>
+                    #70 /2 a&b 70/3,70/4 Bhdhihaal village,<br>
+                    Nelamangala taluk, Yeshwantpur (Opp. MEI Factory),<br>
+                    Bangalore rural district , Karnataka-562123
+                </p>
+                <a href="http://www.phedelco.com" class="green-link">www.phedelco.com</a>
+            </div>
+        </div>
+        <div class="right-contactform">
+            <h1>Contact Us</h1>
+            <p>Got a technical issue? Need details about our Business plan? Let us know.</p>
+            <form id="contactForm">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Please provide your full name" required>
+                <label for="email">Your email</label>
+                <input type="email" id="email" name="email" placeholder="support@phedelco.com" required>
+                <label for="message">Your message</label>
+                <textarea id="message" name="message" placeholder="Leave a comment..." required></textarea>
+                <button type="submit" class="send-button">Send message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+  
         <!--::footer_part start::-->
         <footer class="footer_part">
             <div class="footer_top">
@@ -537,7 +987,6 @@
                                 <h4 href="#whyphedel">Why Phedel?</h4>
                                 <ul class="list-unstyled">
                                     <li><a href="#synadv"> Synergetic Advancement</a></li>
-                               
                             </div>
                         </div>
                     </div>
@@ -549,6 +998,7 @@
 
 
     <!-- jquery plugins here-->
+    <script src="./public/js/index.js"></script>
     <script src="public/js/jquery-1.12.1.min.js"></script>
     <!-- popper js -->
     <script src="public/js/popper.min.js"></script>
@@ -572,12 +1022,17 @@
     <script src="public/js/jquery.form.js"></script>
     <script src="public/js/jquery.validate.min.js"></script>
     <script src="public/js/mail-script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
     <!-- custom js -->
     <script src="public/js/custom.js"></script>
     <script src="public/./js/services.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+   
     
     <script>
         $(document).ready(function() {
@@ -599,6 +1054,55 @@
                 }
             });
         });
+
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+        
+            const email = document.getElementById('email').value;
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+        
+            fetch('/send-email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ email, name, message }) // Changed 'subject' to 'name'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        
+        document.querySelectorAll('.navbar-nav a, .contt').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+        
+                // Only trigger smooth scroll for internal links (ignores links to external pages)
+                if (href.startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = href.substring(1); // Get the target section ID
+                    const targetElement = document.getElementById(targetId); // Get the target element
+        
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+
     </script>
 </body>
 
