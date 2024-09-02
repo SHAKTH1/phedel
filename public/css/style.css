@@ -32,24 +32,6 @@
 
 
 
-.navbar-collapse {
-  transition: height 1s ease;
-}
-
-.navbar-toggler {
-  transition: all 1s ease;
-}
-
-.navbar-toggler.collapsed .menu_icon {
-  transform: rotate(90deg);
-}
-
-.navbar-toggler:not(.collapsed) .menu_icon {
-  transform: rotate(180deg);
-}
-
-/**************** extend css start ****************/
-/**************** common css start ****************/
 /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
 
 body {
@@ -81,7 +63,7 @@ body {
   overflow-x: hidden; /* Hide horizontal overflow within header */
 }
 
-
+/* General Slider Styles */
 #banner-part {
   position: relative;
   z-index: 1;
@@ -89,440 +71,149 @@ body {
   overflow: hidden;
 }
 
-
-table {
-	border-collapse:collapse;
-	border-spacing:0;
-}
-fieldset,img { 
-	border:0;
-}
-input{
-	border:1px solid #b0b0b0;
-	padding:3px 5px 4px;
-	color:#979797;
-	width:190px;
-}
-address,caption,cite,code,dfn,th,var {
-	font-style:normal;
-	font-weight:normal;
-}
-ol,ul {
-	list-style:none;
-}
-caption,th {
-	text-align:left;
-}
-h1,h2,h3,h4,h5,h6 {
-	font-size:100%;
-	font-weight:normal;
-}
-q:before,q:after {
-	content:'';
-}
-abbr,acronym { border:0;
-}
-/* General Demo Style */
-
-
-.clr{
-	clear: both;
-}
-.container > header{
-	padding: 30px 30px 10px 20px;
-	margin: 0px 20px 10px 20px;
-	position: relative;
-	display: block;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
-    text-align: left;
-}
-.container > header h1{
-  font-family: "helvetica neue", helvetica;
-	font-size: 35px;
-	line-height: 35px;
-	position: relative;
-	font-weight: 400;
-	color: #fff;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
-    padding: 0px 0px 5px 0px;
-}
-.container > header h1 span{
-
-}
-.container > header h2, p.info{
-	font-size: 16px;
-	font-style: italic;
-	color: #f8f8f8;
-	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
-}
-
-.slideshow,
-.slideshow:after {
-    /* position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px; */
-    z-index: 0;
-}
-.slideshow:after {
-    content: '';
-    background: transparent url(../images/pattern.png) repeat top left;
-}
-.slideshow li span {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    opacity: 0;
-    z-index: 0;
-	  -webkit-backface-visibility: hidden;
-    -webkit-animation: imageAnimation 36s linear infinite 0s;
-    -moz-animation: imageAnimation 36s linear infinite 0s;
-    -o-animation: imageAnimation 36s linear infinite 0s;
-    -ms-animation: imageAnimation 36s linear infinite 0s;
-    animation: imageAnimation 36s linear infinite 0s;
-}
-.slideshow li div {
-    z-index: 1000;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    -webkit-animation: titleAnimation 36s linear infinite 0s;
-    -moz-animation: titleAnimation 36s linear infinite 0s;
-    -o-animation: titleAnimation 36s linear infinite 0s;
-    -ms-animation: titleAnimation 36s linear infinite 0s;
-    animation: titleAnimation 36s linear infinite 0s;
-}
-.slideshow li div h3 {
-  
-  text-transform: uppercase;
-  font-size: 40px;
+.slideshow {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
   padding: 0;
-  line-height: 200px;
-	color: rgba(255,255,255, 0.8);
-}
-.slideshow li:nth-child(1) span { background-image: url(/public/images/datacenter-hd.jpg) }
-.slideshow li:nth-child(2) span {
-    background-image: url(/public/images/tele-tower-hd.jpg);
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    -o-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
-}
-.slideshow li:nth-child(3) span {
-    background-image: url(/public/images/solarcells.jpg);
-    -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;
-    -o-animation-delay: 12s;
-    -ms-animation-delay: 12s;
-    animation-delay: 12s;
-}
-.slideshow li:nth-child(4) span {
-    background-image: url(/public/images/hdpe-pipe-hd.jpg);
-    -webkit-animation-delay: 18s;
-    -moz-animation-delay: 18s;
-    -o-animation-delay: 18s;
-    -ms-animation-delay: 18s;
-    animation-delay: 18s;
-}
-.slideshow li:nth-child(5) span {
-    background-image: url(/public/images/outdoor-racks.jpg);
-    -webkit-animation-delay: 24s;
-    -moz-animation-delay: 24s;
-    -o-animation-delay: 24s;
-    -ms-animation-delay: 24s;
-    animation-delay: 24s;
+  list-style: none;
 }
 
-.slideshow li:nth-child(2) div {
-    -webkit-animation-delay: 6s;
-    -moz-animation-delay: 6s;
-    -o-animation-delay: 6s;
-    -ms-animation-delay: 6s;
-    animation-delay: 6s;
-}
-.slideshow li:nth-child(3) div {
-    -webkit-animation-delay: 12s;
-    -moz-animation-delay: 12s;
-    -o-animation-delay: 12s;
-    -ms-animation-delay: 12s;
-    animation-delay: 12s;
-}
-.slideshow li:nth-child(4) div {
-    -webkit-animation-delay: 18s;
-    -moz-animation-delay: 18s;
-    -o-animation-delay: 18s;
-    -ms-animation-delay: 18s;
-    animation-delay: 18s;
-}
-.slideshow li:nth-child(5) div {
-    -webkit-animation-delay: 24s;
-    -moz-animation-delay: 24s;
-    -o-animation-delay: 24s;
-    -ms-animation-delay: 24s;
-    animation-delay: 24s;
+.slideshow li {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Start off-screen to the right */
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideAnimation 20s infinite ease-in-out; /* Total duration adjusted */
 }
 
-/* Animation for the slideshow images */
-@-webkit-keyframes imageAnimation { 
-	0% {
-	    opacity: 0;
-	    -webkit-animation-timing-function: ease-in;
-	}
-	8% {
-	    opacity: 1;
-	    -webkit-transform: scale(1.05);
-	    -webkit-animation-timing-function: ease-out;
-	}
-	17% {
-	    opacity: 1;
-	    -webkit-transform: scale(1.1);
-	}
-	25% {
-	    opacity: 0;
-	    -webkit-transform: scale(1.1);
-	}
-	100% { opacity: 0 }
+.slideshow li:nth-child(1) {
+  animation-delay: 0s;
 }
-@-moz-keyframes imageAnimation { 
-	0% {
-	    opacity: 0;
-	    -moz-animation-timing-function: ease-in;
-	}
-	8% {
-	    opacity: 1;
-	    -moz-transform: scale(1.05);
-	    -moz-animation-timing-function: ease-out;
-	}
-	17% {
-	    opacity: 1;
-	    -moz-transform: scale(1.1);
-	}
-	25% {
-	    opacity: 0;
-	    -moz-transform: scale(1.1);
-	}
-	100% { opacity: 0 }
+
+.slideshow li:nth-child(2) {
+  animation-delay: 5s; /* Delay for each slide */
 }
-@-o-keyframes imageAnimation { 
-	0% {
-	    opacity: 0;
-	    -o-animation-timing-function: ease-in;
-	}
-	8% {
-	    opacity: 1;
-	    -o-transform: scale(1.05);
-	    -o-animation-timing-function: ease-out;
-	}
-	17% {
-	    opacity: 1;
-	    -o-transform: scale(1.1);
-	}
-	25% {
-	    opacity: 0;
-	    -o-transform: scale(1.1);
-	}
-	100% { opacity: 0 }
+
+.slideshow li:nth-child(3) {
+  animation-delay: 10s;
 }
-@-ms-keyframes imageAnimation { 
-	0% {
-	    opacity: 0;
-	    -ms-animation-timing-function: ease-in;
-	}
-	8% {
-	    opacity: 1;
-	    -ms-transform: scale(1.05);
-	    -ms-animation-timing-function: ease-out;
-	}
-	17% {
-	    opacity: 1;
-	    -ms-transform: scale(1.1);
-	}
-	25% {
-	    opacity: 0;
-	    -ms-transform: scale(1.1);
-	}
-	100% { opacity: 0 }
+
+.slideshow li:nth-child(4) {
+  animation-delay: 15s;
 }
-@keyframes imageAnimation { 
-	0% {
-	    opacity: 0;
-	    animation-timing-function: ease-in;
-	}
-	8% {
-	    opacity: 1;
-	    transform: scale(1.05);
-	    animation-timing-function: ease-out;
-	}
-	17% {
-	    opacity: 1;
-	    transform: scale(1.1);
-	}
-	25% {
-	    opacity: 0;
-	    transform: scale(1.1);
-	}
-	100% { opacity: 0 }
+
+.slideshow li span {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-/* Animation for the title */
-@-webkit-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -webkit-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -webkit-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -webkit-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -webkit-transform: scale(10);
-	}
-	100% { opacity: 0 }
+
+.slideshow li div {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  z-index: 1000;
+  width: 90%; /* Allow text to fit properly */
 }
-@-moz-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -moz-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -moz-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -moz-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -moz-transform: scale(10);
-	}
-	100% { opacity: 0 }
+
+.slideshow li div h3 {
+  text-transform: uppercase;
+  font-size: 2.5vw; /* Responsive font size */
+  padding: 0;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
 }
-@-o-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -o-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -o-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -o-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -o-transform: scale(10);
-	}
-	100% { opacity: 0 }
+
+/* Keyframes for sliding effect */
+@keyframes slideAnimation {
+  0% {
+    left: 100%; /* Start off-screen */
+    opacity: 0;
+  }
+  10% {
+    left: 0; /* Slide in */
+    opacity: 1;
+  }
+  35% {
+    left: 0; /* Hold in place */
+    opacity: 1;
+  }
+  45% {
+    left: -100%; /* Slide out */
+    opacity: 0;
+  }
+  45.01% {
+    left: 100%; /* Jump back to the start position immediately after sliding out */
+    opacity: 0;
+  }
+  100% {
+    left: 100%; /* Remain off-screen */
+    opacity: 0;
+  }
 }
-@-ms-keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    -ms-transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    -ms-transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    -ms-transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    -webkit-transform: scale(10);
-	}
-	100% { opacity: 0 }
-}
-@keyframes titleAnimation { 
-	0% {
-	    opacity: 0;
-	    transform: translateY(200px);
-	}
-	8% {
-	    opacity: 1;
-	    transform: translateY(0px);
-	}
-	17% {
-	    opacity: 1;
-	    transform: scale(1);
-	}
-	19% { opacity: 0 }
-	25% {
-	    opacity: 0;
-	    transform: scale(10);
-	}
-	100% { opacity: 0 }
-}
-/* Show at least something when animations not supported */
-.no-cssanimations .slideshow li span{
-	opacity: 1;
-}
-@media screen and (max-width: 1140px) { 
-	.slideshow li div h3 { font-size: 33px }
-}
-@media screen and (max-width: 600px) { 
-	.slideshow li div h3 { 
-    font-size: 23px;
-        line-height: 155%;
-   }
-}
+
+/* Media Queries for Different Screen Sizes */
+
+/* Large screens (desktops, 1200px and above) */
 @media screen and (min-width: 1200px) {
   .slideshow li div h3 {
-      font-size: 40px;
-      line-height: 1.5;
+    font-size: 3vw; /* Scale font size relative to viewport */
   }
 }
 
-@media screen and (min-width: 992px) and (max-width: 1199px) {
+/* Medium screens (tablets, between 768px and 1199px) */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .slideshow li div h3 {
-      font-size: 38px;
-      line-height: 1.4;
+    font-size: 3.5vw;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .slideshow li div h3 {
-      font-size: 36px;
-      line-height: 1.3;
-  }
-}
+
+/* Small screens (large smartphones, between 600px and 767px) */
 @media screen and (min-width: 600px) and (max-width: 767px) {
   .slideshow li div h3 {
-      font-size: 34px;
-      line-height: 1.2;
+    font-size: 4.5vw;
+    line-height: 130%;
   }
 }
-@media screen and (min-width: 480px) and (max-width: 599px) {
+
+/* Extra small screens (smartphones, less than 600px) */
+@media screen and (max-width: 599px) {
   .slideshow li div h3 {
-      font-size: 32px;
-      line-height: 1.1;
+    font-size: 5.5vw;
+    line-height: 120%;
+  }
+
+  .slideshow li div {
+    bottom: 20%; /* Adjust caption position for smaller screens */
   }
 }
+
+/* Very small screens (extra small smartphones, less than 480px) */
 @media screen and (max-width: 479px) {
   .slideshow li div h3 {
-      font-size: 30px;
-      line-height: 1;
+    font-size: 6vw;
+    line-height: 115%;
+  }
+
+  .slideshow li div {
+    bottom: 25%; /* Further adjust caption position for very small screens */
+  }
+  .slideshow li span{
+    object-fit: cover;
   }
 }
 
@@ -959,6 +650,7 @@ ul {
 }
 
 /* line 247, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_common.scss */
+
 .body_bg {
   
   background-position: center;
@@ -1008,39 +700,94 @@ ul {
 /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_button.scss */
 
 
-/**************menu part start*****************/
-/* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+/************** Menu Part Start *****************/
+
+#mainNavbar{
+height: 13%;
+z-index: 9999;
+}
+.ins-nav{
+  margin-top: -3%;
+}
+
+/* Custom green color class */
+.bg-custom-green {
+  background-color: #008000 !important; /* Exact green color you want */
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+.bg-custom-blue {
+  background-color: #013A81 !important; /* Button color */
+  color: white !important; /* Initial text color */
+  text-decoration: none !important; /* Remove underline */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/* Button hover effect */
+.bg-custom-blue:hover {
+  background-color: white !important; /* Change background to white on hover */
+  color: #013A81 !important; /* Change text color to custom blue on hover */
+}
+
+/* Button hover effect */
+.bg-custom-blue:hover {
+  background-color: white !important;
+  color: #013A81 !important;
+}
+
+/* Responsive adjustments for the navbar */
+@media (max-width: 768px) {
+  #navbar-sticky {
+    background-color: #013A81 ; /* Set dropdown background to white */
+  }
+  .nav-link {
+    color: black !important;
+  }
+}
+
+/*
+
+
+.navbar-collapse {
+  transition: height 0.35s ease;
+  overflow: hidden;
+}
+
+.navbar-toggler {
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler.collapsed .menu_icon {
+  transform: rotate(90deg);
+}
+
+.navbar-toggler:not(.collapsed) .menu_icon {
+  transform: rotate(180deg);
+}
+
 .main_menu {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   z-index: 999;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-
 .main_menu .navbar-brand {
-  padding-top: 0rem;
-  padding-bottom: 0px;
+  padding: 0;
   width: 13%;
 }
 
-
 .main_menu .navbar {
-  padding: 0px;
+  padding: 0;
   margin-left: 3%;
 }
-
 
 .main_menu .main-menu-item {
   justify-content: center;
 }
-
-
-
-
-
-
 
 .main_menu .main-menu-item ul li .nav-link {
   color: #fff;
@@ -1048,281 +795,111 @@ ul {
   padding: 43px 23px;
   font-family: "Poppins", sans-serif;
   text-transform: capitalize;
-  line-height: 0;
   font-weight: 400;
+  line-height: 0%;
 }
-
 
 .main_menu .main-menu-item ul li .nav-link:hover {
   color: #fff;
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 21, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .main_menu .main-menu-item ul li .nav-link {
-    padding: 35px 20px;
-  }
-}
-
-/* line 39, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .main_menu .main-menu-item .nav-item a {
   position: relative;
   z-index: 1;
 }
 
-/* line 42, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .main_menu .main-menu-item .nav-item a:before {
   position: absolute;
   left: 16%;
   top: 49px;
-  width: 0%;
+  width: 0;
   height: 2px;
   content: "";
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-/* line 53, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .main_menu .main-menu-item .nav-item a:hover:before {
   width: 67%;
 }
 
-/* line 62, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu #search_1 i {
-  color: #fff;
-}
-
-/* line 69, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu .dropdown-toggle:hover .nav-item .dropdown {
-  color: #ff0000 !important;
-}
-
-/* line 75, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu #search_input_box {
-  position: fixed;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 1140px;
-  z-index: 999;
-  text-align: center;
-  background: #ff0000;
-}
-
-/* line 89, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu #search_input_box ::placeholder {
-  color: #fff;
-}
-
-@media (max-width: 991px) {
-  /* line 75, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .main_menu #search_input_box {
-    margin-top: 15px;
-  }
-}
-
-/* line 99, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu #search_input_box .form-control {
-  background: transparent;
-  border: 0;
-  color: #ffffff;
-  font-weight: 400;
-  font-size: 15px;
-  padding: 0;
-}
-
-/* line 108, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu #search_input_box .btn {
-  width: 0;
-  height: 0;
-  padding: 0;
-  border: 0;
-}
-
-/* line 115, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu #search_input_box .ti-close {
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-  padding: 10px;
-  padding-right: 0;
-}
-
-/* line 124, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu .search-inner {
-  padding: 5px 5px;
-}
-
-/* line 128, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu .form-control:focus {
-  box-shadow: none;
-}
-
-/* line 132, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.main_menu .active_color {
-  color: #f5790b !important;
-}
-
-/* line 137, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.cart {
-  margin-left: 20px;
-}
-
-/* line 140, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.cart .dropdown-toggle::after {
-  display: inline-block;
-  margin-left: .255em;
-  vertical-align: .255em;
-  content: "";
-  border: 0px solid transparent;
-}
-
-/* line 148, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.cart i {
-  color: #fff;
-  position: relative;
-  z-index: 1;
-  font-size: 15px;
-}
-
-/* line 154, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.cart i:after {
-  position: absolute;
-  border-radius: 50%;
-  background-color: #f13d80;
-  width: 14px;
-  height: 14px;
-  right: -8px;
-  top: -8px;
-  content: "5";
-  text-align: center;
-  line-height: 15px;
-  font-size: 10px;
-}
-
-/* line 171, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .menu_fixed {
   position: fixed;
   z-index: 9999 !important;
   width: 100%;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
   top: 0;
-  background-color:green;
-  height: 11%;
+  background-color: green;
 }
 
-/* line 179, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.menu_fixed .active_color {
-  color: #00ff660d; 
-}
 
-/* line 185, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .dropdown .dropdown-menu {
   transition: all 0.5s;
-  overflow: hidden;
   transform-origin: top center;
   transform: scale(1, 0);
-  display: block;
-  border: 0px solid transparent;
   background-color: #ff0000;
+  display: none; 
 }
 
-/* line 194, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.dropdown .dropdown-menu .dropdown-item {
-  font-size: 14px;
-  padding: 8px 20px !important;
-  color: #fff !important;
-  background-color: #ff0000;
-  text-transform: capitalize;
-}
-
-/* line 205, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
 .dropdown:hover .dropdown-menu {
   transform: scale(1);
+  display: block;
 }
 
 @media (max-width: 991px) {
-  /* line 214, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .main_menu {
-    padding: 26px 0px;
+    padding: 26px 0;
   }
-  /* line 218, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .home_menu .main-menu-item {
-    padding-left: 0px;
-  }
-  /* line 222, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .main_menu .main-menu-item {
     text-align: left !important;
   }
-  /* line 225, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .main_menu .main-menu-item .nav-item {
     padding: 10px 15px !important;
   }
-  /* line 228, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .main_menu .main-menu-item .nav-item .nav-link {
     padding: 5px 15px !important;
     color: #000;
   }
-  /* line 235, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-collapse {
-    z-index: 9999 !important;
     position: absolute;
     left: 0;
     top: 50px;
     width: 100%;
     background-color: #fff;
     text-align: center !important;
+    z-index: 9999 !important;
   }
-  /* line 246, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .dropdown .dropdown-menu {
-    transform: scale(1, 0);
-    display: none;
-    margin-top: 10px;
-  }
-  /* line 253, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .dropdown:hover .dropdown-menu {
-    transform: scale(1);
-    display: block;
-    color: #ff0000;
-  }
-  /* line 260, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .dropdown .dropdown-item:hover {
-    color: #ff0000 !important;
-  }
-  /* line 265, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-brand img {
-    max-width:auto;
-  
+    max-width: auto;
   }
+
   .main_menu .navbar-brand {
-    width:27%;
+    width: 27%;
   }
-  /* line 269, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-light .navbar-toggler {
     border-color: transparent;
   }
-  /* line 274, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .menu_icon i {
     color: #fff;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 281, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .navbar-collapse {
-    z-index: 9999 !important;
     position: absolute;
     left: 0;
     top: 50px;
     width: 100%;
     background-color: #fff;
     text-align: center !important;
+    z-index: 9999 !important;
   }
-  /* line 291, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-brand img {
     max-width: 100px;
     margin: 0 auto;
@@ -1332,30 +909,25 @@ ul {
     display: inline-block;
     top: 10px;
   }
-  /* line 301, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-light .navbar-toggler {
     border-color: transparent;
     position: absolute;
     left: 0;
-  }
-  /* line 307, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .btn_1 {
-    margin-top: 0;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 313, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
   .navbar-collapse {
-    z-index: 9999 !important;
     position: absolute;
     left: 0;
     top: 50px;
     width: 100%;
     background-color: #fff;
     text-align: center !important;
+    z-index: 9999 !important;
   }
-  /* line 323, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-brand img {
     max-width: 100px;
     margin: 0 auto;
@@ -1365,988 +937,18 @@ ul {
     display: inline-block;
     top: 10px;
   }
-  /* line 333, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
+
   .navbar-light .navbar-toggler {
     border-color: transparent;
     position: absolute;
     left: 0;
   }
-  /* line 339, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-  .btn_1 {
-    margin-top: 0;
-  }
-}
-
-/* line 344, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.dropdown-menu {
-  border: 0px solid rgba(0, 0, 0, 0.15) !important;
-  background-color: #fafafa;
-}
-
-/* line 350, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.dropdown:hover .dropdown-menu {
-  display: block;
-}
-
-/* line 358, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.single_page_menu .main-menu-item .nav-item a {
-  position: relative;
-  z-index: 1;
-}
-
-/* line 361, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.single_page_menu .main-menu-item .nav-item a:before {
-  position: absolute;
-  left: 16%;
-  top: 49px;
-  width: 0%;
-  height: 2px;
-  content: "";
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-/* line 372, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_menu.scss */
-.single_page_menu .main-menu-item .nav-item a:hover:before {
-  width: 67%;
-}
-
-
+} */
 
 /**************** hero part css end ****************/
 
 
-/************review_part css start***************/
-/* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams {
-  position: relative;
-  z-index: 99;
-  background: url(../img/live_stareams_bg.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  padding: 140px 0 190px;
-  overflow: hidden;
-}
 
-@media (max-width: 991px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-  .live_stareams {
-    padding: 70px 0 115px 15px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-  .live_stareams {
-    padding: 100px 0 145px 15px;
-  }
-}
-
-/* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .container-fluid {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-/* line 21, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_text {
-  margin-bottom: 25px;
-}
-
-/* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_text h2 {
-  font-size: 45px;
-  line-height: 55px;
-  margin-bottom: 35px;
-  position: relative;
-  z-index: 1;
-}
-
-@media (max-width: 991px) {
-  /* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-  .live_stareams .live_stareams_text h2 {
-    margin-bottom: 20px;
-    font-size: 25px;
-    line-height: 30px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-  .live_stareams .live_stareams_text h2 {
-    font-size: 30px;
-    line-height: 40px;
-  }
-}
-
-/* line 38, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_text h2:after {
-  position: absolute;
-  content: "";
-  left: -26px;
-  top: -38px;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/Shape_text.png);
-  background-repeat: no-repeat;
-  z-index: 1;
-}
-
-/* line 51, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide {
-  margin-left: 15px;
-}
-
-@media (max-width: 991px) {
-  /* line 51, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-  .live_stareams .live_stareams_slide {
-    margin-left: 0;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 51, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-  .live_stareams .live_stareams_slide {
-    margin-left: 0;
-  }
-}
-
-/* line 59, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img {
-  position: relative;
-  z-index: 1;
-  width: 440px;
-  height: 440px;
-}
-
-/* line 65, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-size: 200% auto;
-  opacity: 0;
-  z-index: 1;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-/* line 79, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img img {
-  width: 100%;
-  height: 100%;
-}
-
-/* line 84, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img .video-play-button {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  text-align: center;
-  top: 42%;
-  z-index: 2;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-/* line 96, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img .video-play-button span {
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
-  background-color: #fff;
-  display: inline-block;
-  color: #ff0000;
-  border-radius: 50%;
-  text-align: center;
-  padding-left: 4px;
-  font-size: 16px;
-}
-
-/* line 111, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img:hover:after {
-  opacity: .5;
-}
-
-/* line 114, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .live_stareams_slide .live_stareams_slide_img:hover .video-play-button {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* line 138, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .owl-next, .live_stareams .owl-prev {
-  position: absolute;
-  margin-top: 20px;
-}
-
-/* line 141, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .owl-next i, .live_stareams .owl-prev i {
-  font-size: 30px;
-  color: #fff;
-}
-
-/* line 146, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_live_stareams.scss */
-.live_stareams .owl-next {
-  margin-left: 30px;
-}
-
-/* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .Latest_War_text {
-  background-image: url("../img/latest_war_img.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 580px;
-  position: relative;
-  z-index: 1;
-  margin-bottom: 40px;
-}
-
-@media (max-width: 991px) {
-  /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .Latest_War_text {
-    height: 400px;
-    margin-bottom: 0;
-  }
-}
-
-/* line 16, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .Latest_War_text:after {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  content: "";
-  background-size: 200% auto;
-  opacity: 0;
-  -webkit-transition: all 0.6s ease 0s;
-  -moz-transition: all 0.6s ease 0s;
-  -o-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
-}
-
-/* line 28, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .Latest_War_text .btn_2 {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  top: 45%;
-  text-align: center;
-  display: inline-block;
-  z-index: 9;
-  opacity: 0;
-  width: 200px;
-  padding: 18.5px 0;
-}
-
-/* line 43, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .Latest_War_text:hover:after {
-  opacity: .7;
-}
-
-/* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .Latest_War_text:hover .btn_2 {
-  opacity: 1;
-  visibility: visible;
-  z-index: 99;
-}
-
-/* line 54, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .Latest_War_bg_1 {
-  background-image: url("../img/latest_war_img_1.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* line 57, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .single_war_text {
-  height: 100%;
-}
-
-/* line 60, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .single_war_text h4 {
-  font-size: 24px;
-  line-height: 30px;
-  margin-bottom: 16px;
-}
-
-/* line 66, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .single_war_text p {
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-}
-
-/* line 71, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .single_war_text a {
-  display: inline-block;
-  background: linear-gradient(to right, #ff0000 0%, #c6019a 50%, #ff0000 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 200% auto;
-  -webkit-transition: all 0.6s ease 0s;
-  -moz-transition: all 0.6s ease 0s;
-  -o-transition: all 0.6s ease 0s;
-  transition: all 0.6s ease 0s;
-  font-size: 14px;
-  text-transform: capitalize;
-  margin-top: 8px;
-}
-
-/* line 19, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_mixins.scss */
-.Latest_War .single_war_text a:hover {
-  background-position: center right;
-}
-
-/* line 80, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .war_text_item {
-  margin-top: 25px;
-}
-
-@media (max-width: 991px) {
-  /* line 83, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .war_text_item img {
-    max-width: 50px;
-  }
-}
-
-/* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .war_text_item h2 {
-  font-size: 30px;
-}
-
-@media (max-width: 991px) {
-  /* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .war_text_item h2 {
-    font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .war_text_item h2 {
-    font-size: 20px;
-  }
-}
-
-/* line 100, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .war_text_item span {
-  margin: 0 15px;
-}
-
-@media (max-width: 991px) {
-  /* line 105, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .latest_war_list {
-    margin-bottom: 40px;
-  }
-}
-
-/* line 109, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .latest_war_list .war_text_item {
-  padding-left: 43px;
-}
-
-@media (max-width: 991px) {
-  /* line 109, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .latest_war_list .war_text_item {
-    padding-left: 0;
-  }
-}
-
-@media (max-width: 576px) {
-  /* line 109, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-  .Latest_War .latest_war_list .war_text_item {
-    padding-left: 0;
-    display: block !important;
-    text-align: center;
-  }
-}
-
-/* line 120, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .latest_war_list .war_text_item img {
-  max-width: 50px;
-}
-
-/* line 123, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .latest_war_list .war_text_item h2 {
-  font-size: 16px;
-}
-
-/* line 127, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_Latest_War.scss */
-.Latest_War .latest_war_list .war_text_item .war_date p {
-  font-size: 17px;
-}
-
-/**************** gallery_part css start ****************/
-/* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part {
-  position: relative;
-  z-index: 1;
-  /* clearfix */
-  /* ---- grid-item ---- */
-}
-
-/* line 5, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  overflow: hidden;
-}
-
-/* line 12, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item .single_gallery_item_iner:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  transform: scale(0.7);
-  background-size: 200% auto;
-}
-
-/* line 27, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item .single_gallery_item_iner .gallery_item_text {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 42%;
-  z-index: 5;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  width: 100%;
-  overflow: hidden;
-  text-align: center;
-  margin: 0 auto;
-  font-size: 40px;
-  color: #fff;
-}
-
-/* line 42, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item .single_gallery_item_iner .gallery_item_text h3 {
-  color: #fff;
-  font-size: 20px;
-  position: relative;
-  display: block;
-  overflow: hidden;
-}
-
-/* line 50, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item .single_gallery_item_iner .gallery_item_text p {
-  color: #fff;
-}
-
-/* line 57, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item:hover .gallery_item_text {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* line 62, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .single_gallery_item:hover .single_gallery_item_iner:after {
-  opacity: 0.7;
-  transform: scale(1);
-}
-
-/* line 70, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .grid:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
-/* line 78, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .grid-sizer,
-.gallery_part .grid-item {
-  width: 25%;
-}
-
-@media (max-width: 576px) {
-  /* line 78, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-sizer,
-  .gallery_part .grid-item {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 78, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-sizer,
-  .gallery_part .grid-item {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 78, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-sizer,
-  .gallery_part .grid-item {
-    width: 50%;
-  }
-}
-
-/* line 98, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .grid-item {
-  height: 300px;
-  float: left;
-  border: 5px solid #000;
-  border-bottom: 5px solid #000;
-}
-
-@media (max-width: 991px) {
-  /* line 98, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-item {
-    border: 0px solid transparent;
-    border-bottom: 0px solid transparent;
-  }
-}
-
-/* line 108, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .grid-item--width-1 {
-  width: 50%;
-}
-
-@media (max-width: 576px) {
-  /* line 108, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-item--width-1 {
-    width: 100%;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 108, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-item--width-1 {
-    width: 50%;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 108, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .grid-item--width-1 {
-    width: 50%;
-  }
-}
-
-/* line 124, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .grid-item--height-1 {
-  height: 250px;
-}
-
-/* line 127, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .grid-item--height-2 {
-  height: 350px;
-}
-
-@media (max-width: 991px) {
-  /* line 131, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-  .gallery_part .sm_weight {
-    width: 100%;
-  }
-}
-
-/* line 140, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_gallery_part.scss */
-.gallery_part .bg_img {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/**************** upcomming war css start ****************/
-/* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-.upcomming_war {
-  background-image: url(../img/event_bg.png);
-  background-size: 90%;
-  background-repeat: no-repeat;
-  background-position: bottom;
-}
-
-/* line 7, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-.upcomming_war .upcomming_war_iner {
-  height: 725px;
-}
-
-@media (max-width: 991px) {
-  /* line 7, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-  .upcomming_war .upcomming_war_iner {
-    height: 350px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 7, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-  .upcomming_war .upcomming_war_iner {
-    height: 450px;
-  }
-}
-
-/* line 15, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-.upcomming_war .upcomming_war_iner h2 {
-  margin-bottom: 25px;
-}
-
-@media (max-width: 991px) {
-  /* line 15, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-  .upcomming_war .upcomming_war_iner h2 {
-    font-size: 25px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 15, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-  .upcomming_war .upcomming_war_iner h2 {
-    font-size: 29px;
-  }
-}
-
-/* line 25, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-.upcomming_war span {
-  display: block;
-  font-size: 20px;
-  color: white;
-}
-
-/* line 30, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-.upcomming_war #days {
-  font-size: 48px;
-  color: #ffffff;
-}
-
-/* line 34, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_upcomming_war.scss */
-.upcomming_war #hours {
-  font-size: 48px;
-  color: #fff;
-}
-
-/**************** service_part css start ****************/
-/* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part {
-  position: relative;
-  z-index: 1;
-}
-
-/* line 5, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_icon_1 {
-  position: absolute;
-  left: 19%;
-  top: 50%;
-  z-index: -1;
-}
-
-/* line 12, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_icon_2 {
-  left: 35%;
-  top: 23%;
-  position: absolute;
-  z-index: -1;
-}
-
-/* line 18, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_icon_3 {
-  position: absolute;
-  left: 48%;
-  z-index: -1;
-  bottom: 18%;
-}
-
-/* line 24, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_icon_4 {
-  position: absolute;
-  right: 35%;
-  top: 7%;
-  z-index: -1;
-}
-
-@media (max-width: 576px) {
-  /* line 30, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text {
-    padding-left: 0;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 30, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text {
-    padding-left: 0;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 30, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text {
-    padding-left: 0;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 30, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text {
-    padding-left: 0;
-  }
-}
-
-/* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_part_text h2 {
-  font-size: 45px;
-  font-weight: 500;
-  line-height: 1.1;
-  margin-bottom: 21px;
-  position: relative;
-  text-transform: capitalize;
-}
-
-@media (max-width: 576px) {
-  /* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
-    line-height: 35px;
-    margin-top: 15px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
-    line-height: 35px;
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text h2 {
-    font-size: 25px;
-    margin-bottom: 10px;
-    line-height: 35px;
-    margin-top: 20px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-    line-height: 40px;
-  }
-}
-
-/* line 81, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_part_text p {
-  margin-bottom: 46px;
-}
-
-/* line 84, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_part_text .feature_part_text_iner {
-  border-radius: 50px;
-  border-top-right-radius: 0;
-  border: 1px solid #eeeeee;
-  text-align: center;
-  padding: 34px 27px 31px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-@media (max-width: 991px) {
-  /* line 84, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .feature_part_text .feature_part_text_iner {
-    padding: 20px 15px 15px;
-    margin-bottom: 15px;
-  }
-}
-
-/* line 98, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_part_text .feature_part_text_iner:hover {
-  border: 1px solid #ff0000;
-}
-
-/* line 101, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_part_text .feature_part_text_iner h4 {
-  font-size: 40px;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
-}
-
-/* line 106, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .feature_part_text .feature_part_text_iner p {
-  margin-bottom: 0;
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 1.667;
-}
-
-/* line 115, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature {
-  margin: 0 11px;
-}
-
-@media (max-width: 991px) {
-  /* line 115, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature {
-    margin: 0;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 115, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature {
-    margin: 0;
-  }
-}
-
-/* line 124, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature:nth-child(2) {
-  margin-top: 60px;
-}
-
-@media (max-width: 991px) {
-  /* line 124, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature:nth-child(2) {
-    margin-top: 30px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 124, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature:nth-child(2) {
-    margin-top: 30px;
-  }
-}
-
-/* line 135, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature_part {
-  padding: 40px 25px 31px;
-  text-align: center;
-  border-radius: 5px;
-  box-shadow: 0px 3px 81px 0px rgba(216, 216, 216, 0.45);
-  background-color: #fff;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-
-@media (max-width: 991px) {
-  /* line 135, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature_part {
-    padding: 25px 15px;
-    margin-top: 25px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 135, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature_part {
-    margin-top: 25px;
-  }
-}
-
-/* line 152, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature_part img {
-  margin-bottom: 21px;
-  height: 65px;
-}
-
-@media (max-width: 991px) {
-  /* line 152, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature_part img {
-    margin-bottom: 21px;
-  }
-}
-
-/* line 162, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature_part img i {
-  color: #0c2e60;
-  font-size: 24px;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
-}
-
-/* line 168, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature_part h4 {
-  font-weight: 600;
-  font-size: 20px;
-  margin-bottom: 22px;
-}
-
-@media (max-width: 576px) {
-  /* line 168, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature_part h4 {
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 168, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature_part h4 {
-    margin-bottom: 15px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 168, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .feature_part .single_feature_part h4 {
-    margin-bottom: 15px;
-  }
-}
-
-/* line 189, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.feature_part .single_feature_part p {
-  color: #7f7f7f;
-  line-height: 1.8;
-  font-size: 15px;
-}
-
-/* line 196, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-.single_feature_padding {
-  padding-top: 140px;
-}
-
-@media (max-width: 576px) {
-  /* line 196, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 196, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 196, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 196, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_feature_part.scss */
-  .single_feature_padding {
-    padding-top: 70px;
-  }
-}
 
 /************about_us css start***************/
 /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_about_us.scss */
@@ -2359,13 +961,14 @@ ul {
   position: fixed;
   width: 100%;
   height: 100%;
-  background-color: #000;
+  background-color: #ffffff;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 9999;
+  z-index: 99999;
   top: 0;
   left: 0;
+
 }
 
 #page-loader img {
@@ -2515,7 +1118,7 @@ ul {
 .about_us {
   position: relative;
   z-index: 99;
-  background-color: #1b1b1b;
+  background-color: #e9ecef;
   height: auto;
   display: flex;
   flex-wrap: wrap;
@@ -2535,11 +1138,14 @@ ul {
   text-align: center;
   gap: 20px;
   padding-top: 50px;
-  color: white;
+  color: black;
 }
 
 .abt h1 {
   font-size: 40px;
+}
+.abt p{
+  color: #000;
 }
 
 .about_us_text {
@@ -2561,7 +1167,7 @@ ul {
   flex: 1 1 300px;
   padding: 20px;
   border-right: 3px solid #A5DE01;
-  background-color: #1b1b1b;
+  background-color: #e9ecef;
   margin-bottom: 20px;
 }
 
@@ -2571,14 +1177,14 @@ ul {
 
 .feature1 h3 {
   margin-top: 0;
-  color: #ffffff;
+  color: black;
   font-size: 24px;
 }
 
 .feature1 ul {
   padding-left: 20px;
   margin-bottom: 0;
-  color: #b1adad;
+  color: black;
 }
 
 @media (min-width: 768px) {
@@ -2651,7 +1257,7 @@ ul {
   border-radius: 10px;
 }
 
-.contt {
+/* .contt {
   background-color: #f8f9fa;;
   color: black;
   border: none;
@@ -2670,7 +1276,7 @@ ul {
   background-color: darkgreen; 
   color: black; 
   text-decoration: none; 
-}
+} */
 
 
 
@@ -2755,7 +1361,7 @@ ul {
 #our-founder {
   height: auto;
   width: 100%;
-  background-color: #1b1b1b;
+  background-color: #e9ecef;
 }
 
 
@@ -2797,7 +1403,7 @@ ul {
   z-index: 100;
   font-size: 54px;
   margin-top: 5%;
-  color: white;
+  color: black;
 
 }
 
@@ -2809,6 +1415,7 @@ ul {
     FONT-SIZE: 22px;
     width: 114%;
     padding-bottom: 5%;
+    color: black;
 }
 .left-arrows-container-fnd {
   display: flex;
@@ -2838,6 +1445,7 @@ ul {
   margin: 20px 0;
   margin-left: -34%;
   margin-top: -12%;
+  color: black;
 }
 
 
@@ -2932,7 +1540,7 @@ ul {
       display: none;
   }
   .founder-image{
-    margin-left: 56%;
+    margin-left: 70%;
     width: 23%;
   }
 }
@@ -3009,8 +1617,8 @@ ul {
 .right-con-fnd .ppp{
   font-size: 26px;
   margin: 20px 0;
-  margin-left: -34%;
-  margin-top: -12%;
+  margin-left: 0%;
+  margin-top: 3%;
 }
 
 }
@@ -3337,7 +1945,7 @@ ul {
 
 }
 .slider-txt{
-  margin-top: -18%;
+  margin-top: -60%;
   margin-left: 21%;
 }
 .slider-txt h2{
@@ -3373,6 +1981,9 @@ ul {
   .content button {
     padding: 8px 16px;
   }
+  .slider-txt{
+    margin-top: 18%
+  }
 }
 
 @media (max-width: 991px) {
@@ -3396,6 +2007,9 @@ ul {
 
   .content button {
     padding: 6px 12px;
+  }
+  .slider-txt{
+
   }
 }
 
@@ -3446,13 +2060,17 @@ ul {
   }
 
   .slider-txt {
-    margin-top: -15%;
+    margin-top: -11%;
     margin-left: 10%;
   }
 
   .slider-txt h2 {
     font-size: 35px;
   }
+  .carousel .list .item .topic{
+    color: #f1683a;
+    font-size: 320%;
+}
 }
 
 /* hand */
@@ -3470,7 +2088,7 @@ ul {
 #our-infrastructure{
   height: auto;
   width: 100%;
-  background-color: #1b1b1b;
+  background-color: #e9ecef;
   font-family: "Poppins", sans-serif;
   
 }
@@ -3488,7 +2106,7 @@ ul {
  }
  .inf h1{
   padding-top: 3%;
-  color: white;
+  color: black;
  }
  .vector-line-inf{
   width:35%;
@@ -3499,11 +2117,11 @@ ul {
 
 
  .imgg-text{
-  color: white;
+  color: black;
   padding-bottom: 3%;
  }
  .imgg-text h1{
-  color: #00e400;
+  color: green;
  }
  .imgg-text h2{
 
@@ -3528,7 +2146,7 @@ ul {
 }
 
 .tile {
-  background-color: #1B1B1B; /* Example background color for the card */
+  background-color: #e9ecef; /* Example background color for the card */
   padding: 25px;
   /* border-radius: 8px; */
   /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); Example shadow for the card */
@@ -3537,13 +2155,13 @@ ul {
 /* Headings and paragraph styling */
 .tile h1 {
   font-size: 28px;
-  color: white; /* Dark text color for readability */
+  color: black; /* Dark text color for readability */
 }
 
 .tile p {
   text-align: justify;
   font-size: large;
-  color: white; /* Medium text color */
+  color: black; /* Medium text color */
   padding-top: 4%;
 }
 
@@ -3565,13 +2183,14 @@ ul {
 
 /* why-phedel */
 
+/* why-phedel */
+
 #whyphedel {
   height: auto;
   width: 100%;
-  background-color: #1b1b1b;
+  background-color: #e9ecef;
   font-family: "Poppins", sans-serif;
 }
-
 
 #whyphedel .why {
   width: 100%;
@@ -3627,7 +2246,7 @@ ul {
   width: 90%;
   font-size: 16px;
   margin-top: 10px;
-  color: white;
+  color: black;
 }
 
 #whyphedel .syn-info {
@@ -3636,162 +2255,278 @@ ul {
   font-size: 21px;
   line-height: 28px;
   text-align: justify;
-  color: white;
+  color: black;
   margin-left: 17%;
   padding-bottom: 12%;
 }
- .why, .why-info, .syn-adv{
-  color: white;
- }
 
-/* contact us *//* General styles for the contact section */
-#contactus {
-    padding: 40px 20px; /* Add more padding for better spacing */
-    background-color: white;
-    width: 100%;
+.why,
+.why-info,
+.syn-adv {
+  color: black;
+}
+
+.grid-line img {
   
+  border: 2px solid green; /* Adds a green border around the image */
+}
+
+/* General styles for the contact section */
+#contactus {
+  padding: 40px 20px;
+  background-color: #e9ecef;
+  width: 100%;
 }
 
 /* Flex container for the contact section */
 .com-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 30px; /* Increased gap between columns */
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
-.left-add, .right-contactform {
-    width: 100%;
+.left-add,
+.right-contactform {
+  width: 100%;
 }
 
 /* Styles for the map container */
 .map-container {
   width: 100%;
   height: 300px;
-  margin-left: 16%;
+  margin-left: 10%;
+  margin-bottom: 5%;
 }
 
 /* Styles for the left side (addresses) */
-.reachus, .off-add {
-    text-align: center;
-    margin-bottom: 30px; /* Margins between sections */
+.reachus,
+.off-add {
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .reachus h1 {
-    color: #000;
-    font-weight: bold;
-    font-size: 28px;
+  color: #000;
+  font-weight: bold;
+  font-size: 28px;
 }
 
-.reachus h2, .off-add h2 {
-    color: black;
-    font-size: 21px;
-    margin-top: 10px;
-    font-weight: bold;
+.reachus h2,
+.off-add h2 {
+  color: black;
+  font-size: 21px;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-.reachus p, .off-add p {
-    color: black;
-    font-size: 16px;
+.reachus p,
+.off-add p {
+  color: black;
+  font-size: 16px;
 }
 
 .off-add a {
-    color: green;
-    font-weight: bold;
-    text-decoration: none;
+  color: green;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .off-add a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Styles for the right side (contact form) */
 .right-contactform {
-    background-color: #fff;
-    padding: 30px; /* More padding for better spacing */
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px; /* Margin at the end of the section */
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .right-contactform h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: black;
-    font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
 }
 
 .right-contactform p {
-    font-size: 16px;
-    color: #6c757d;
-    margin-bottom: 30px; /* Space between paragraphs and form elements */
-    text-align: center;
+  font-size: 16px;
+  color: #6c757d;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .right-contactform label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 10px;
+  display: block;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 .right-contactform input[type="email"],
 .right-contactform input[type="text"],
 .right-contactform textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f8f9fa;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f8f9fa;
+  box-sizing: border-box;
 }
 
 .right-contactform textarea {
-    height: 120px; /* Slightly larger for more text visibility */
+  height: 120px;
 }
 
 .send-button {
-    background-color: green;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 10px; /* Margin between button and text area */
+  background-color: green;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 .send-button:hover {
-    background-color: #157347;
+  background-color: #157347;
 }
 
-/* Responsive design */
-@media (min-width: 768px) {
-    .com-contact {
-        flex-direction: row;
-        justify-content: space-between;
-    }
+/* Responsive design for different screen sizes */
 
-    .left-add, .right-contactform {
-        width: 48%;
-    }
+/* Extra small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .map-container {
+      width: 90%;
+      height: 200px;
+      margin-bottom: 39%;
+  }
+
+  .reachus h1,
+  .right-contactform h1 {
+      font-size: 20px;
+  }
+
+  .reachus h2,
+  .off-add h2 {
+      font-size: 18px;
+  }
+  .map-container iframe{
+    width: auto;
+  }
 }
 
-@media (min-width: 992px) {
-    .map-container {
-        width: 100%; /* Keep the map full-width within its container */
-        height: 300px; /* Consistent height */
-    }
+/* Small screens (480px to 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  .com-contact{
+    flex-direction: column;
+  }
+  .map-container {
+      width: 100%;
+      height: 250px;
+      margin-bottom: 20%;
+  }
 
-    .reachus h1 {
-        font-size: 35px;
-    }
+  .reachus h1,
+  .right-contactform h1 {
+      font-size: 22px;
+  }
 
-    .reachus h2, .off-add h2 {
-        font-size: 24px;
-    }
+  .reachus h2,
+  .off-add h2 {
+      font-size: 20px;
+  }
+  .map-container iframe{
+    width: 82%;
+  }
 }
+
+/* Medium screens (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .com-contact {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .left-add,
+  .right-contactform {
+      width: 48%;
+  }
+
+  .map-container {
+      width: 100%;
+      height: 300px;
+      margin-bottom: 20px;
+      margin-left: 0%;
+  }
+
+  .reachus h1,
+  .right-contactform h1 {
+      font-size: 26px;
+  }
+
+  .reachus h2,
+  .off-add h2 {
+      font-size: 22px;
+  }
+  .map-container iframe{
+    width: 100%;
+  }
+}
+
+/* Large screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .map-container {
+      width: 100%;
+      height: 300px;
+      margin-left: 1%;
+  }
+
+  .reachus h1 {
+      font-size: 30px;
+  }
+
+  .reachus h2,
+  .off-add h2 {
+      font-size: 24px;
+  }
+  .map-container iframe{
+    
+  }
+}
+
+/* Extra large screens (1200px and above) */
+@media (min-width: 1200px) {
+  .map-container {
+    width: 110%;
+    height: 350px;
+    margin-left: 5%;
+    margin-bottom: 20%;
+  }
+  .map-container iframe{
+    width: 83%;
+    height: 115%;
+  }
+
+  .reachus h1 {
+      font-size: 35px;
+  }
+
+  .reachus h2,
+  .off-add h2 {
+      font-size: 28px;
+  }
+
+  .right-contactform h1 {
+      font-size: 30px;
+  }
+}
+
 
 /* footer */
 
@@ -3906,7 +2641,7 @@ ul {
 /* Max-width 767px */
 @media (max-width: 767px) {
  #whyphedel .syn-adv{
- font-size: 25px;
+ font-size: 35px;
  width: auto;
  }
 
@@ -4650,1700 +3385,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 0;
 }
 
-/* line 155, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn {
-  display: inline-block;
-  outline: none;
-  line-height: 40px;
-  padding: 0 30px;
-  font-size: .8em;
-  text-align: center;
-  text-decoration: none;
-  font-weight: 500;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-/* line 166, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn:focus {
-  outline: none;
-}
-
-/* line 169, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.e-large {
-  padding: 0 40px;
-  line-height: 50px;
-}
-
-/* line 173, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.large {
-  line-height: 45px;
-}
-
-/* line 176, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.medium {
-  line-height: 30px;
-}
-
-/* line 179, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.small {
-  line-height: 25px;
-}
-
-/* line 182, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.radius {
-  border-radius: 3px;
-}
-
-/* line 185, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.circle {
-  border-radius: 20px;
-}
-
-/* line 188, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.arrow {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-/* line 195, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.arrow span {
-  margin-left: 10px;
-}
-
-/* line 199, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.default {
-  color: #415094;
-  background: #f9f9ff;
-  border: 1px solid transparent;
-}
-
-/* line 203, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.default:hover {
-  border: 1px solid #f9f9ff;
-  background: #fff;
-}
-
-/* line 208, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.default-border {
-  border: 1px solid #f9f9ff;
-  background: #fff;
-}
-
-/* line 211, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.default-border:hover {
-  color: #415094;
-  background: #f9f9ff;
-  border: 1px solid transparent;
-}
-
-/* line 217, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.primary {
-  color: #fff;
-  background: #ff0000;
-  border: 1px solid transparent;
-}
-
-/* line 221, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.primary:hover {
-  color: #ff0000;
-  border: 1px solid #ff0000;
-  background: #fff;
-}
-
-/* line 227, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.primary-border {
-  color: #ff0000;
-  border: 1px solid #ff0000;
-  background: #fff;
-}
-
-/* line 231, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.primary-border:hover {
-  color: #fff;
-  background: #ff0000;
-  border: 1px solid transparent;
-}
-
-/* line 237, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.success {
-  color: #fff;
-  background: #4cd3e3;
-  border: 1px solid transparent;
-}
-
-/* line 241, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.success:hover {
-  color: #4cd3e3;
-  border: 1px solid #4cd3e3;
-  background: #fff;
-}
-
-/* line 247, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.success-border {
-  color: #4cd3e3;
-  border: 1px solid #4cd3e3;
-  background: #fff;
-}
-
-/* line 251, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.success-border:hover {
-  color: #fff;
-  background: #4cd3e3;
-  border: 1px solid transparent;
-}
-
-/* line 257, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.info {
-  color: #fff;
-  background: #38a4ff;
-  border: 1px solid transparent;
-}
-
-/* line 261, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.info:hover {
-  color: #38a4ff;
-  border: 1px solid #38a4ff;
-  background: #fff;
-}
-
-/* line 267, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.info-border {
-  color: #38a4ff;
-  border: 1px solid #38a4ff;
-  background: #fff;
-}
-
-/* line 271, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.info-border:hover {
-  color: #fff;
-  background: #38a4ff;
-  border: 1px solid transparent;
-}
-
-/* line 277, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.warning {
-  color: #fff;
-  background: #f4e700;
-  border: 1px solid transparent;
-}
-
-/* line 281, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.warning:hover {
-  color: #f4e700;
-  border: 1px solid #f4e700;
-  background: #fff;
-}
-
-/* line 287, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.warning-border {
-  color: #f4e700;
-  border: 1px solid #f4e700;
-  background: #fff;
-}
-
-/* line 291, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.warning-border:hover {
-  color: #fff;
-  background: #f4e700;
-  border: 1px solid transparent;
-}
-
-/* line 297, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.danger {
-  color: #fff;
-  background: #f44a40;
-  border: 1px solid transparent;
-}
-
-/* line 301, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.danger:hover {
-  color: #f44a40;
-  border: 1px solid #f44a40;
-  background: #fff;
-}
-
-/* line 307, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.danger-border {
-  color: #f44a40;
-  border: 1px solid #f44a40;
-  background: #fff;
-}
-
-/* line 311, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.danger-border:hover {
-  color: #fff;
-  background: #f44a40;
-  border: 1px solid transparent;
-}
-
-/* line 317, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.link {
-  color: #415094;
-  background: #f9f9ff;
-  text-decoration: underline;
-  border: 1px solid transparent;
-}
-
-/* line 322, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.link:hover {
-  color: #415094;
-  border: 1px solid #f9f9ff;
-  background: #fff;
-}
-
-/* line 328, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.link-border {
-  color: #415094;
-  border: 1px solid #f9f9ff;
-  background: #fff;
-  text-decoration: underline;
-}
-
-/* line 333, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.link-border:hover {
-  color: #415094;
-  background: #f9f9ff;
-  border: 1px solid transparent;
-}
-
-/* line 339, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.genric-btn.disable {
-  color: #222222, 0.3;
-  background: #f9f9ff;
-  border: 1px solid transparent;
-  cursor: not-allowed;
-}
-
-/* line 347, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.generic-blockquote {
-  padding: 30px 50px 30px 30px;
-  background: #f9f9ff;
-  border-left: 2px solid #ff0000;
-}
-
-/* line 353, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table-wrap {
-  overflow-x: scroll;
-}
-
-/* line 357, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table {
-  background: #f9f9ff;
-  padding: 15px 0px 30px 0px;
-  min-width: 800px;
-}
-
-/* line 361, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .serial {
-  width: 11.83%;
-  padding-left: 30px;
-}
-
-/* line 365, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .country {
-  width: 28.07%;
-}
-
-/* line 368, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .visit {
-  width: 19.74%;
-}
-
-/* line 371, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .percentage {
-  width: 40.36%;
-  padding-right: 50px;
-}
-
-/* line 375, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-head {
-  display: flex;
-}
-
-/* line 377, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-head .serial,
-.progress-table .table-head .country,
-.progress-table .table-head .visit,
-.progress-table .table-head .percentage {
-  color: #415094;
-  line-height: 40px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
-/* line 387, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row {
-  padding: 15px 0;
-  border-top: 1px solid #edf3fd;
-  display: flex;
-}
-
-/* line 391, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .serial,
-.progress-table .table-row .country,
-.progress-table .table-row .visit,
-.progress-table .table-row .percentage {
-  display: flex;
-  align-items: center;
-}
-
-/* line 399, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .country img {
-  margin-right: 15px;
-}
-
-/* line 404, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress {
-  width: 80%;
-  border-radius: 0px;
-  background: transparent;
-}
-
-/* line 408, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar {
-  height: 5px;
-  line-height: 5px;
-}
-
-/* line 411, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-1 {
-  background-color: #6382e6;
-}
-
-/* line 414, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-2 {
-  background-color: #e66686;
-}
-
-/* line 417, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-3 {
-  background-color: #f09359;
-}
-
-/* line 420, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-4 {
-  background-color: #73fbaf;
-}
-
-/* line 423, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-5 {
-  background-color: #73fbaf;
-}
-
-/* line 426, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-6 {
-  background-color: #6382e6;
-}
-
-/* line 429, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-7 {
-  background-color: #a367e7;
-}
-
-/* line 432, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.progress-table .table-row .percentage .progress .progress-bar.color-8 {
-  background-color: #e66686;
-}
-
-/* line 441, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-gallery-image {
-  margin-top: 30px;
-  background-repeat: no-repeat !important;
-  background-position: center center !important;
-  background-size: cover !important;
-  height: 200px;
-}
-
-/* line 449, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.list-style {
-  width: 14px;
-  height: 14px;
-}
-
-/* line 455, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.unordered-list li {
-  position: relative;
-  padding-left: 30px;
-  line-height: 1.82em !important;
-}
-
-/* line 459, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.unordered-list li:before {
-  content: "";
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border: 3px solid #ff0000;
-  background: #fff;
-  top: 4px;
-  left: 0;
-  border-radius: 50%;
-}
-
-/* line 473, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list {
-  margin-left: 30px;
-}
-
-/* line 475, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list li {
-  list-style-type: decimal-leading-zero;
-  color: #ff0000;
-  font-weight: 500;
-  line-height: 1.82em !important;
-}
-
-/* line 480, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list li span {
-  font-weight: 300;
-  color: #828bb2;
-}
-
-/* line 488, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list-alpha li {
-  margin-left: 30px;
-  list-style-type: lower-alpha;
-  color: #ff0000;
-  font-weight: 500;
-  line-height: 1.82em !important;
-}
-
-/* line 494, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list-alpha li span {
-  font-weight: 300;
-  color: #828bb2;
-}
-
-/* line 502, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list-roman li {
-  margin-left: 30px;
-  list-style-type: lower-roman;
-  color: #ff0000;
-  font-weight: 500;
-  line-height: 1.82em !important;
-}
-
-/* line 508, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.ordered-list-roman li span {
-  font-weight: 300;
-  color: #828bb2;
-}
-
-/* line 515, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input {
-  display: block;
-  width: 100%;
-  line-height: 40px;
-  border: none;
-  outline: none;
-  background: #f9f9ff;
-  padding: 0 20px;
-}
-
-/* line 523, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input:focus {
-  outline: none;
-}
-
-/* line 528, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.input-group-icon {
-  position: relative;
-}
-
-/* line 530, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.input-group-icon .icon {
-  position: absolute;
-  left: 20px;
-  top: 0;
-  line-height: 40px;
-  z-index: 3;
-}
-
-/* line 535, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.input-group-icon .icon i {
-  color: #797979;
-}
-
-/* line 540, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.input-group-icon .single-input {
-  padding-left: 45px;
-}
-
-/* line 545, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-textarea {
-  display: block;
-  width: 100%;
-  line-height: 40px;
-  border: none;
-  outline: none;
-  background: #f9f9ff;
-  padding: 0 20px;
-  height: 100px;
-  resize: none;
-}
-
-/* line 555, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-textarea:focus {
-  outline: none;
-}
-
-/* line 560, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input-primary {
-  display: block;
-  width: 100%;
-  line-height: 40px;
-  border: 1px solid transparent;
-  outline: none;
-  background: #f9f9ff;
-  padding: 0 20px;
-}
-
-/* line 568, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input-primary:focus {
-  outline: none;
-  border: 1px solid #ff0000;
-}
-
-/* line 574, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input-accent {
-  display: block;
-  width: 100%;
-  line-height: 40px;
-  border: 1px solid transparent;
-  outline: none;
-  background: #f9f9ff;
-  padding: 0 20px;
-}
-
-/* line 582, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input-accent:focus {
-  outline: none;
-  border: 1px solid #eb6b55;
-}
-
-/* line 588, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input-secondary {
-  display: block;
-  width: 100%;
-  line-height: 40px;
-  border: 1px solid transparent;
-  outline: none;
-  background: #f9f9ff;
-  padding: 0 20px;
-}
-
-/* line 596, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.single-input-secondary:focus {
-  outline: none;
-  border: 1px solid #f09359;
-}
-
-/* line 602, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-switch {
-  width: 35px;
-  height: 17px;
-  border-radius: 8.5px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 609, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-switch input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-/* line 619, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-switch input + label {
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #ff0000;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-/* line 632, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-switch input:checked + label {
-  left: 19px;
-}
-
-/* line 639, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch {
-  width: 35px;
-  height: 17px;
-  border-radius: 8.5px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 646, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 655, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 663, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch input + label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border-radius: 8.5px;
-  cursor: pointer;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-}
-
-/* line 677, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch input + label:after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-/* line 693, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch input:checked + label:after {
-  left: 19px;
-}
-
-/* line 696, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-switch input:checked + label:before {
-  background: #ff0000;
-}
-
-
-/* line 704, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch {
-  width: 35px;
-  height: 17px;
-  border-radius: 8.5px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 711, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 720, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 728, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch input + label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border-radius: 8.5px;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-/* line 742, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch input + label:after {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background: #fff;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-/* line 758, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch input:checked + label:after {
-  left: 19px;
-}
-
-/* line 761, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-switch input:checked + label:before {
-  background: #4cd3e3;
-}
-
-/* line 769, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 776, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 785, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 798, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-checkbox input:checked + label {
-  background: url(../img/elements/primary-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 806, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 813, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 822, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 835, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-checkbox input:checked + label {
-  background: url(../img/elements/success-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 843, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-checkbox {
-  width: 16px;
-  height: 16px;
-  border-radius: 3px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 850, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-checkbox input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 859, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-checkbox input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 871, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-checkbox input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
-
-/* line 876, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-checkbox input:checked + label {
-  background: url(../img/elements/disabled-check.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 884, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 891, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 900, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 913, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.primary-radio input:checked + label {
-  background: url(../img/elements/primary-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 921, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 928, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 937, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 950, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.confirm-radio input:checked + label {
-  background: url(../img/elements/success-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 958, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-radio {
-  width: 16px;
-  height: 16px;
-  border-radius: 8px;
-  background: #f9f9ff;
-  position: relative;
-  cursor: pointer;
-}
-
-/* line 965, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-radio input {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-}
-
-/* line 974, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-radio input + label {
-  position: absolute;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  cursor: pointer;
-  border: 1px solid #f1f1f1;
-}
-
-/* line 986, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-radio input:disabled {
-  cursor: not-allowed;
-  z-index: 3;
-}
-
-/* line 991, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.disabled-radio input:checked + label {
-  background: url(../img/elements/disabled-radio.png) no-repeat center center/cover;
-  border: none;
-}
-
-/* line 999, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select {
-  height: 40px;
-}
-
-/* line 1001, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .nice-select {
-  border: none;
-  border-radius: 0px;
-  height: 40px;
-  background: #f9f9ff;
-  padding-left: 20px;
-  padding-right: 40px;
-}
-
-/* line 1008, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .nice-select .list {
-  margin-top: 0;
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-  width: 100%;
-  padding: 10px 0 10px 0px;
-}
-
-/* line 1015, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .nice-select .list .option {
-  font-weight: 300;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  line-height: 28px;
-  min-height: 28px;
-  font-size: 12px;
-  padding-left: 20px;
-}
-
-/* line 1022, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .nice-select .list .option.selected {
-  color: #ff0000;
-  background: transparent;
-}
-
-/* line 1026, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .nice-select .list .option:hover {
-  color: #ff0000;
-  background: transparent;
-}
-
-/* line 1033, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .current {
-  margin-right: 50px;
-  font-weight: 300;
-}
-
-/* line 1037, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.default-select .nice-select::after {
-  right: 20px;
-}
-
-/* line 1042, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select {
-  height: 40px;
-  width: 100%;
-}
-
-/* line 1045, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .nice-select {
-  border: none;
-  border-radius: 0px;
-  height: 40px;
-  background: #f9f9ff;
-  padding-left: 45px;
-  padding-right: 40px;
-  width: 100%;
-}
-
-/* line 1053, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .nice-select .list {
-  margin-top: 0;
-  border: none;
-  border-radius: 0px;
-  box-shadow: none;
-  width: 100%;
-  padding: 10px 0 10px 0px;
-}
-
-/* line 1060, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .nice-select .list .option {
-  font-weight: 300;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  line-height: 28px;
-  min-height: 28px;
-  font-size: 12px;
-  padding-left: 45px;
-}
-
-/* line 1067, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .nice-select .list .option.selected {
-  color: #ff0000;
-  background: transparent;
-}
-
-/* line 1071, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .nice-select .list .option:hover {
-  color: #ff0000;
-  background: transparent;
-}
-
-/* line 1078, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .current {
-  margin-right: 50px;
-  font-weight: 300;
-}
-
-/* line 1082, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.form-select .nice-select::after {
-  right: 20px;
-}
-
-/* line 1086, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.mt-10 {
-  margin-top: 10px;
-}
-
-/* line 1089, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.section-top-border {
-  padding: 50px 0;
-  border-top: 1px dotted #eee;
-}
-
-/* line 1093, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.mb-30 {
-  margin-bottom: 30px;
-}
-
-/* line 1096, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.mt-30 {
-  margin-top: 30px;
-}
-
-/* line 1099, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_elements.scss */
-.switch-wrap {
-  margin-bottom: 10px;
-}
-
-/**************** blog part css start ****************/
-@media (max-width: 576px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part {
-    padding-bottom: 50px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part {
-    padding-bottom: 50px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part {
-    padding-bottom: 50px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part {
-    padding-bottom: 50px;
-  }
-}
-
-/* line 15, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .card {
-  border: 0px solid transparent;
-}
-
-/* line 18, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .blog_right_sidebar .widget_title {
-  font-size: 20px;
-  margin-bottom: 40px;
-  font-style: inherit !important;
-}
-
-@media (max-width: 576px) {
-  /* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog {
-    margin-bottom: 20px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 23, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog {
-    margin-bottom: 20px;
-  }
-}
-
-/* line 36, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card-img-top {
-  border-radius: 0px;
-}
-
-/* line 39, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card {
-  border-radius: 0px;
-  background-color: transparent;
-  position: relative;
-}
-
-/* line 44, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .card-body {
-  padding: 35px 30px 23px;
-  background-color: #fff;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: 1px solid #edeff2;
-}
-
-/* line 49, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .card-body:hover {
-  box-shadow: 0px 10px 30px 0px rgba(12, 46, 96, 0.1);
-  border: 1px solid transparent;
-}
-
-@media (max-width: 576px) {
-  /* line 44, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card .card-body {
-    padding: 15px 10px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 44, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card .card-body {
-    padding: 15px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 44, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card .card-body {
-    padding: 20px;
-  }
-}
-
-/* line 66, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .card-body .btn_4 {
-  margin-bottom: 20px;
-}
-
-/* line 70, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .card-body a {
-  color: #fff;
-  text-transform: capitalize;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-}
-
-/* line 76, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .dot {
-  position: relative;
-  padding-left: 20px;
-}
-
-/* line 79, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card .dot:after {
-  position: absolute;
-  content: "";
-  width: 10px;
-  height: 10px;
-  top: 5px;
-  left: 0;
-  background-color: #ff0000;
-  border-radius: 50%;
-}
-
-/* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card span {
-  color: #8a8a8a;
-  margin-bottom: 10px;
-  display: inline-block;
-  margin-top: 10px;
-}
-
-@media (max-width: 576px) {
-  /* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card span {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card span {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card span {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 90, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card span {
-    margin-bottom: 5px;
-    margin-top: 5px;
-  }
-}
-
-/* line 112, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card h5 {
-  font-weight: 600;
-  line-height: 1.5;
-  font-size: 19px;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  text-transform: capitalize;
-}
-
-@media (max-width: 576px) {
-  /* line 112, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card h5 {
-    margin-bottom: 5px;
-    font-size: 17px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 112, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card h5 {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 112, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card h5 {
-    margin-bottom: 10px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 112, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card h5 {
-    margin-bottom: 10px;
-    font-size: 18px;
-  }
-}
-
-/* line 133, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card h5:hover {
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
-  color: #ff0000;
-}
-
-/* line 139, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card ul {
-  border-top: 1px solid #edeff2;
-  padding-top: 20px;
-  margin-top: 24px;
-}
-
-/* line 143, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card ul li {
-  display: inline-block;
-  color: #8a8a8a;
-  margin-right: 39px;
-}
-
-@media (max-width: 576px) {
-  /* line 143, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card ul li {
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 143, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card ul li {
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 143, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card ul li {
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 143, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-  .blog_part .single-home-blog .card ul li {
-    margin-right: 10px;
-  }
-}
-
-/* line 159, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_blog_part.scss */
-.blog_part .single-home-blog .card ul li span {
-  margin-right: 10px;
-}
-
-
-/*=================== contact banner end ====================*/
-/*=================== contact form start ====================*/
-/* line 39, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.contact-title {
-  font-size: 27px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-/* line 47, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.form-contact label {
-  font-size: 14px;
-}
-
-/* line 88, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.form-contact .form-control {
-  border: 1px solid #f0e9ff;
-  border-radius: 5px;
-  height: 48px;
-  padding-left: 18px;
-  font-size: 13px;
-  background: transparent;
-}
-
-/* line 96, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.form-contact .form-control:focus {
-  outline: 0;
-  box-shadow: none;
-}
-
-/* line 101, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.form-contact .form-control::placeholder {
-  font-weight: 300;
-  color: #999999;
-}
-
-/* line 107, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.form-contact textarea {
-  border-radius: 12px;
-  height: 100% !important;
-}
-
-@media (max-width: 576px) {
-  /* line 119, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-  .contact-section .btn_1 {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 127, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-  .contact-section .btn_1 {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 135, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-  .contact-section .btn_1 {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 143, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-  .contact-section .btn_1 {
-    margin-bottom: 0px !important;
-    margin-top: 0px !important;
-  }
-}
-
-/*=================== contact form end ====================*/
-/* Contact Success and error Area css
-============================================================================================ */
-/* line 156, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.modal-message .modal-dialog {
-  position: absolute;
-  top: 36%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%) !important;
-  margin: 0px;
-  max-width: 500px;
-  width: 100%;
-}
-
-/* line 165, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.modal-message .modal-dialog .modal-content .modal-header {
-  text-align: center;
-  display: block;
-  border-bottom: none;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-/* line 171, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.modal-message .modal-dialog .modal-content .modal-header .close {
-  position: absolute;
-  right: -15px;
-  top: -15px;
-  padding: 0px;
-  color: #fff;
-  opacity: 1;
-  cursor: pointer;
-}
-
-/* line 180, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.modal-message .modal-dialog .modal-content .modal-header h2 {
-  display: block;
-  text-align: center;
-  padding-bottom: 10px;
-}
-
-/* line 185, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_contact.scss */
-.modal-message .modal-dialog .modal-content .modal-header p {
-  display: block;
-}
-
-/* line 1, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb_bg {
-  background-image: url("../img/breadcrumb.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-/* line 5, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-}
-
-/* line 10, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb .breadcrumb_iner {
-  height: 475px;
-  width: 100%;
-  display: table;
-}
-
-/* line 14, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb .breadcrumb_iner .breadcrumb_iner_item {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
-  color: #fff;
-  font-size: 90px;
-  font-weight: 500;
-  margin-bottom: 10px;
-  text-transform: capitalize;
-}
-
-@media (max-width: 576px) {
-  /* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-  .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
-    font-size: 35px;
-  }
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  /* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-  .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
-    font-size: 35px;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  /* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-  .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
-    font-size: 40px;
-  }
-}
-
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 17, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-  .breadcrumb .breadcrumb_iner .breadcrumb_iner_item h2 {
-    font-size: 50px;
-  }
-}
-
-/* line 39, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb .breadcrumb_iner .breadcrumb_iner_item p {
-  font-size: 15px;
-  color: #fff;
-}
-
-/* line 43, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb .breadcrumb_iner .breadcrumb_iner_item span {
-  margin: 0px 5px;
-  font-size: 12px;
-}
-
-/* line 51, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_breadcrumb.scss */
-.breadcrumb {
-  margin-bottom: 0px !important;
-}
 
 /**********************footer part css*******************/
 /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_footer.scss */
