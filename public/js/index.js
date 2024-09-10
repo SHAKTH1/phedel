@@ -70,4 +70,11 @@ window.addEventListener('load', function() {
     loader.style.display = 'none';
 });
 
+const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+const navbarSticky = document.getElementById('navbar-sticky');
+
+toggleButton.addEventListener('click', () => {
+  navbarSticky.classList.toggle('show');
+});
+
 
