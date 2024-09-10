@@ -778,6 +778,9 @@ ul {
     margin-top: 0;
     align-items: center;
   }
+  .ph-logo{
+    margin-left: -3%;
+  }
 }
 
 
