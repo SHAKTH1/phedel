@@ -77,4 +77,13 @@ toggleButton.addEventListener('click', () => {
   navbarSticky.classList.toggle('show');
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    const slider = document.querySelector(".slider");
+    const logos = document.querySelector(".logos");
+  
+    // Clone the logos to create an infinite loop effect
+    const clone = logos.cloneNode(true);
+    slider.appendChild(clone);
+  });
+  
 
