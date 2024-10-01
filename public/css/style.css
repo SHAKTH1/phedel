@@ -63,6 +63,7 @@ body {
   overflow-x: hidden; /* Hide horizontal overflow within header */
 }
 
+
 /* General Slider Styles */
 #banner-part {
   position: relative;
@@ -71,155 +72,104 @@ body {
   overflow: hidden;
 }
 
-.slideshow {
+.banner-slider {
+  width: 1300px;
+  max-width: 100vw;
+  height: 700px;
+  margin: auto;
   position: relative;
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  overflow: hidden;
 }
 
-.slideshow li {
+.banner-list {
   position: absolute;
   top: 0;
-  left: 100%; /* Start off-screen to the right */
-  width: 100%;
+  left: 0;
   height: 100%;
-  opacity: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: slideAnimation 20s infinite ease-in-out; /* Total duration adjusted */
+  width: max-content;
+  transition: 1s;
 }
 
-.slideshow li:nth-child(1) {
-  animation-delay: 0s;
+.banner-item {
+  position: relative; /* To position h3 within the item */
 }
 
-.slideshow li:nth-child(2) {
-  animation-delay: 5s; /* Delay for each slide */
-}
-
-.slideshow li:nth-child(3) {
-  animation-delay: 10s;
-}
-
-.slideshow li:nth-child(4) {
-  animation-delay: 15s;
-}
-
-.slideshow li span {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-
-.slideshow li span img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: fill;
-}
-.slideshow li div {
-  position: absolute;
-  bottom: 10%;
+.banner-item h3 {
+  position: absolute; /* Position h3 absolutely within the banner item */
+  bottom: 62px; /* Adjust the vertical position */
   left: 50%;
   transform: translateX(-50%);
+  color: #013A81; /* Text color */
+  font-size: 2em; /* Adjust font size as needed */
   text-align: center;
+  background: rgba(255, 255, 255, 0.7); /* Add background for readability */
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.banner-list img {
+  width: 1300px;
+  max-width: 100vw;
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+.banner-buttons {
+  position: absolute;
+  top: 45%;
+  left: 5%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-buttons button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff5;
   color: #fff;
-  z-index: 1000;
-  width: 90%; /* Allow text to fit properly */
+  border: none;
+  font-family: monospace;
+  font-weight: bold;
 }
 
-.slideshow li div h3 {
-  text-transform: uppercase;
-  font-size: 2.5vw;
-  padding: 0;
-  line-height: 1.5;
-  color: #013A81; /* Updated text color */
+.banner-dots {
+  position: absolute;
+  bottom: 53px;
+  color: #fff;
+  left: 0;
+  width: 100%;
   margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
 }
 
-/* Keyframes for sliding effect */
-@keyframes slideAnimation {
-  0% {
-    left: 100%; /* Start off-screen */
-    opacity: 0;
-  }
-  10% {
-    left: 0; /* Slide in */
-    opacity: 1;
-  }
-  35% {
-    left: 0; /* Hold in place */
-    opacity: 1;
-  }
-  45% {
-    left: -100%; /* Slide out */
-    opacity: 0;
-  }
-  45.01% {
-    left: 100%; /* Jump back to the start position immediately after sliding out */
-    opacity: 0;
-  }
-  100% {
-    left: 100%; /* Remain off-screen */
-    opacity: 0;
-  }
+.banner-dots li {
+  list-style: none;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 50%;
 }
 
-/* Media Queries for Different Screen Sizes */
+.banner-dots li.active {
+  width: 30px;
+}
 
-/* Large screens (desktops, 1200px and above) */
-@media screen and (min-width: 1200px) {
-  .slideshow li div h3 {
-    font-size: 3vw; /* Scale font size relative to viewport */
+@media screen and (max-width: 768px) {
+  .banner-slider {
+    height: 400px;
+  }
+  .banner-item h3 {
+    font-size: 1.5em; /* Adjust text size for smaller screens */
   }
 }
 
-/* Medium screens (tablets, between 768px and 1199px) */
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .slideshow li div h3 {
-    font-size: 3.5vw;
-  }
-}
-
-/* Small screens (large smartphones, between 600px and 767px) */
-@media screen and (min-width: 600px) and (max-width: 767px) {
-  .slideshow li div h3 {
-    font-size: 4.5vw;
-    line-height: 130%;
-  }
-}
-
-/* Extra small screens (smartphones, less than 600px) */
-@media screen and (max-width: 599px) {
-  .slideshow li div h3 {
-    font-size: 5.5vw;
-    line-height: 120%;
-  }
-
-  .slideshow li div {
-    bottom: 20%; /* Adjust caption position for smaller screens */
-  }
-}
-
-/* Very small screens (extra small smartphones, less than 480px) */
-@media screen and (max-width: 479px) {
-  .slideshow li div h3 {
-    font-size: 6vw;
-    line-height: 115%;
-  }
-
-  .slideshow li div {
-    bottom: 25%; /* Further adjust caption position for very small screens */
-  }
-  #banner-part{
-    height: 70vh;
-  }
-}
 
 
 *, *::before, *::after {
