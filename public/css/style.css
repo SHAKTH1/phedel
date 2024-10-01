@@ -113,11 +113,15 @@ body {
   width: 100%;
   height: 100%;
   display: block;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
+
+.slideshow li span img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: fill;
+}
 .slideshow li div {
   position: absolute;
   bottom: 10%;
@@ -131,10 +135,10 @@ body {
 
 .slideshow li div h3 {
   text-transform: uppercase;
-  font-size: 2.5vw; /* Responsive font size */
+  font-size: 2.5vw;
   padding: 0;
   line-height: 1.5;
-  color: rgba(255, 255, 255, 0.8);
+  color: #013A81; /* Updated text color */
   margin: 0;
 }
 
@@ -212,8 +216,8 @@ body {
   .slideshow li div {
     bottom: 25%; /* Further adjust caption position for very small screens */
   }
-  .slideshow li span{
-    object-fit: cover;
+  #banner-part{
+    height: 70vh;
   }
 }
 
@@ -697,13 +701,15 @@ ul {
 
 /************** Menu Part Start *****************/
 /* Base Navbar styles */
+
+
+/************** Menu Part Start *****************/
+/* Base Navbar styles */
 #mainNavbar {
   height: 13%;
   z-index: 9999;
-  background-color: rgba(255, 255, 255, 0.1); /* Slight transparent white background */
-  backdrop-filter: blur(10px); /* Apply blur effect */
-  -webkit-backdrop-filter: blur(10px); /* Safari support */
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  background-color: transparent; /* Make the navbar background completely transparent */
+  transition: background-color 0.3s ease;
 }
 
 .ins-nav {
@@ -728,6 +734,16 @@ ul {
   color: white !important;
   text-decoration: none !important;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Navbar links */
+#nav-name a {
+  color: #013A81 !important; /* Default color for nav links */
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+#nav-name a:hover {
+  color: rgb(106, 106, 106) !important; /* Change color to green on hover */
 }
 
 /* Button hover effect */
@@ -777,225 +793,17 @@ ul {
 @media (max-width: 480px) {
   /* Adjust navbar for smaller mobile devices */
   .ins-nav {
-    /* flex-direction: column; */
     margin-top: 0;
     align-items: center;
   }
   .ph-logo {
     margin-left: -3%;
   }
-}
-
-
-
-/*
-
-
-.navbar-collapse {
-  transition: height 0.35s ease;
-  overflow: hidden;
-}
-
-.navbar-toggler {
-  transition: all 0.3s ease;
-}
-
-.navbar-toggler.collapsed .menu_icon {
-  transform: rotate(90deg);
-}
-
-.navbar-toggler:not(.collapsed) .menu_icon {
-  transform: rotate(180deg);
-}
-
-.main_menu {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-  background-color: transparent;
-  transition: background-color 0.3s ease;
-  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.05);
-}
-
-.main_menu .navbar-brand {
-  padding: 0;
-  width: 13%;
-}
-
-.main_menu .navbar {
-  padding: 0;
-  margin-left: 3%;
-}
-
-.main_menu .main-menu-item {
-  justify-content: center;
-}
-
-.main_menu .main-menu-item ul li .nav-link {
-  color: #fff;
-  font-size: 15px;
-  padding: 43px 23px;
-  font-family: "Poppins", sans-serif;
-  text-transform: capitalize;
-  font-weight: 400;
-  line-height: 0%;
-}
-
-.main_menu .main-menu-item ul li .nav-link:hover {
-  color: #fff;
-}
-
-.main_menu .main-menu-item .nav-item a {
-  position: relative;
-  z-index: 1;
-}
-
-.main_menu .main-menu-item .nav-item a:before {
-  position: absolute;
-  left: 16%;
-  top: 49px;
-  width: 0;
-  height: 2px;
-  content: "";
-  transition: 0.5s;
-}
-
-.main_menu .main-menu-item .nav-item a:hover:before {
-  width: 67%;
-}
-
-.menu_fixed {
-  position: fixed;
-  z-index: 9999 !important;
-  width: 100%;
-  top: 0;
-  background-color: green;
-}
-
-
-.dropdown .dropdown-menu {
-  transition: all 0.5s;
-  transform-origin: top center;
-  transform: scale(1, 0);
-  background-color: #ff0000;
-  display: none; 
-}
-
-.dropdown:hover .dropdown-menu {
-  transform: scale(1);
-  display: block;
-}
-
-@media (max-width: 991px) {
-  .main_menu {
-    padding: 26px 0;
-  }
-
-  .main_menu .main-menu-item {
-    text-align: left !important;
-  }
-
-  .main_menu .main-menu-item .nav-item {
-    padding: 10px 15px !important;
-  }
-
-  .main_menu .main-menu-item .nav-item .nav-link {
-    padding: 5px 15px !important;
-    color: #000;
-  }
-
-  .navbar-collapse {
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 100%;
-    background-color: #fff;
-    text-align: center !important;
-    z-index: 9999 !important;
-  }
-
-  .navbar-brand img {
-    max-width: auto;
-  }
-
-  .main_menu .navbar-brand {
-    width: 27%;
-  }
-
-  .navbar-light .navbar-toggler {
-    border-color: transparent;
-  }
-
-  .menu_icon i {
-    color: #fff;
+  #nav-name a {
+    color: white !important; /* Sets the blue color for text elements */
   }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .navbar-collapse {
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 100%;
-    background-color: #fff;
-    text-align: center !important;
-    z-index: 9999 !important;
-  }
-
-  .navbar-brand img {
-    max-width: 100px;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: inline-block;
-    top: 10px;
-  }
-
-  .navbar-light .navbar-toggler {
-    border-color: transparent;
-    position: absolute;
-    left: 0;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  .navbar-collapse {
-    position: absolute;
-    left: 0;
-    top: 50px;
-    width: 100%;
-    background-color: #fff;
-    text-align: center !important;
-    z-index: 9999 !important;
-  }
-
-  .navbar-brand img {
-    max-width: 100px;
-    margin: 0 auto;
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: inline-block;
-    top: 10px;
-  }
-
-  .navbar-light .navbar-toggler {
-    border-color: transparent;
-    position: absolute;
-    left: 0;
-  }
-} */
-
-/**************** hero part css end ****************/
-
-
-
-
-/************about_us css start***************/
-/* line 2, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_about_us.scss */
 
 /* page loader  */
 
@@ -2385,7 +2193,6 @@ width: 120px;
 
 
 /* our-products-slider */
-/* our-products-slider */
 #hand-img {
   height: auto;
   width: 100%;
@@ -2397,12 +2204,13 @@ width: 120px;
 .prod-container {
   overflow: hidden;
   text-align: center;
+  padding: 20px 0;
 }
 
 .slider {
   display: flex;
   white-space: nowrap;
-  animation: slidein 30s linear infinite;
+  animation: slidein 30s linear infinite; /* Adjust speed as needed */
 }
 
 .logos {
@@ -2413,12 +2221,14 @@ width: 120px;
 .slide {
   display: inline-block;
   width: 200px; /* Adjust width as needed */
-  margin: 0 10px;
+  margin: 0 15px;
   text-align: center;
 }
 
 .slide img {
   width: 100%;
+  height: 150px; /* Set a fixed height */
+  object-fit: contain; /* Maintain aspect ratio without distortion */
   display: block;
   margin: 0 auto;
 }
@@ -2428,6 +2238,7 @@ width: 120px;
   font-size: 14px;
   color: #000;
   text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
 }
 
 .prod-container h2 {
@@ -2440,7 +2251,7 @@ width: 120px;
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Adjusted to half for seamless loop */
+    transform: translateX(-100%);
   }
 }
 
@@ -3882,7 +3693,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
   display: inline-block;
   font-family: "Poppins", sans-serif;
+  font-size: 18px;
 }
+
+
+
 
 /* line 68, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_footer.scss */
 .footer_part .single_footer_part .list-unstyled li a:hover {
