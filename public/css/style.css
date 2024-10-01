@@ -73,9 +73,8 @@ body {
 }
 
 .banner-slider {
-  width: 1300px;
-  max-width: 100vw;
-  height: 700px;
+  width: 100%; /* Make the slider fill the width of the viewport */
+  height: 100%; /* Make the slider fill the height of the container */
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -87,32 +86,33 @@ body {
   left: 0;
   height: 100%;
   display: flex;
-  width: max-content;
+  width: 100%; /* Ensure list takes full width */
   transition: 1s;
 }
 
 .banner-item {
-  position: relative; /* To position h3 within the item */
+  position: relative;
+  width: 100%; /* Make each item take full width */
+  flex-shrink: 0; /* Prevent items from shrinking */
 }
 
 .banner-item h3 {
-  position: absolute; /* Position h3 absolutely within the banner item */
-  bottom: 62px; /* Adjust the vertical position */
+  position: absolute;
+  bottom: 20px; /* Adjust the vertical position */
   left: 50%;
   transform: translateX(-50%);
-  color: #013A81; /* Text color */
-  font-size: 2em; /* Adjust font size as needed */
+  color: #013A81;
+  font-size: 2em;
   text-align: center;
-  background: rgba(255, 255, 255, 0.7); /* Add background for readability */
+  background: rgba(255, 255, 255, 0.7);
   padding: 10px 20px;
   border-radius: 5px;
 }
 
 .banner-list img {
-  width: 1300px;
-  max-width: 100vw;
-  height: 100%;
-  /* object-fit: cover; */
+  width: 100%; /* Make image fill its container */
+  height: 100%; /* Maintain container's height */
+  /* object-fit: cover; Crop and fit the image within the container */
 }
 
 .banner-buttons {
@@ -137,8 +137,7 @@ body {
 
 .banner-dots {
   position: absolute;
-  bottom: 53px;
-  color: #fff;
+  bottom: 20px;
   left: 0;
   width: 100%;
   margin: 0;
@@ -153,7 +152,7 @@ body {
   width: 10px;
   height: 10px;
   background-color: #fff;
-  margin: 20px;
+  margin: 5px;
   border-radius: 50%;
 }
 
@@ -161,15 +160,52 @@ body {
   width: 30px;
 }
 
-@media screen and (max-width: 768px) {
-  .banner-slider {
-    height: 400px;
-  }
-  .banner-item h3 {
-    font-size: 1.5em; /* Adjust text size for smaller screens */
+/* Media Queries */
+
+/* Large screens (up to 1200px) */
+@media screen and (max-width: 1200px) {
+  #banner-part {
+    height: 90vh;
   }
 }
 
+/* Medium screens (up to 992px) */
+@media screen and (max-width: 992px) {
+  #banner-part {
+    height: 92vh;
+  }
+}
+
+/* Small screens (up to 768px) */
+@media screen and (max-width: 768px) {
+  #banner-part {
+    height: 90vh;
+  }
+
+  .banner-item h3 {
+    font-size: 1.5em;
+  }
+
+  .banner-buttons button {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra small screens (up to 480px) */
+@media screen and (max-width: 480px) {
+  .banner-slider {
+    height: 551px;
+  }
+
+  .banner-item h3 {
+    font-size: 1.2em;
+  }
+
+  #banner-part {
+    height: 70vh;
+  }
+}
 
 
 *, *::before, *::after {
