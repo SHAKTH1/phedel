@@ -774,6 +774,11 @@ ul {
   button[data-collapse-toggle="navbar-sticky"] {
     margin-left: auto;
   }
+  #nav-name a {
+    color: white !important; /* Default color for nav links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
 }
 
 @media (max-width: 480px) {
@@ -787,6 +792,7 @@ ul {
   }
   #nav-name a {
     color: white !important; /* Sets the blue color for text elements */
+    transition: color 0.3s ease;
   }
 }
 
