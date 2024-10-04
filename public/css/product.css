@@ -24,6 +24,19 @@ body {
 
 }
 
+/* Modal content container */
+#product-modal .MDL {
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.heading{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 600;
+    
+}
+
 
 /* chatbot */
 

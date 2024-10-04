@@ -1,3 +1,4 @@
+require('dotenv').config(); // Load environment variables
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
@@ -5,27 +6,23 @@ const path = require('path');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from 'public' folder
 
-// Serve static files from the root directory
-app.use(express.static(path.join(__dirname)));
-
-
+// Email sending routes (unchanged)
 app.post('/submit-chatbot', async (req, res) => {
-    const { name, productHelp, email, contactNumber } = req.body;  // Correct the destructured field
+    const { name, productHelp, email, contactNumber } = req.body;
 
-    // Set up the email transport configuration
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'shakthi.amarnath@gmail.com',
-            pass: 'leot sigm nvur fgou'  // Handle this securely
+            user: process.env.GMAIL_USER,
+            pass: process.env.GMAIL_PASS
         }
     });
 
     const mailOptions = {
-        from: 'shakthi.amarnath@gmail.com',
-        to: 'shakthi.amarnath@gmail.com',
+        from: process.env.GMAIL_USER,
+        to: process.env.GMAIL_USER,
         subject: 'Product Enquiry',
         text: `Name: ${name}\nProduct Help: ${productHelp.join(', ')}\nEmail: ${email}\nContact: ${contactNumber}`
     };
@@ -39,46 +36,23 @@ app.post('/submit-chatbot', async (req, res) => {
     }
 });
 
-app.post('/send-email', async (req, res) => {
-    const { email, name, message } = req.body;
-
-    // Set up the email transport configuration
-    const transporter = nodemailer.createTransport({
-        service: 'gmail',
-        auth: {
-            user: 'shakthi.amarnath@gmail.com',
-            pass: 'leot sigm nvur fgou'  // Handle this securely
-        }
-    });
-
-    const mailOptions = {
-        from: 'shakthi.amarnath@gmail.com',
-        to: 'shakthi.amarnath@gmail.com',
-        subject: `Contact Form Submission: ${name}`,
-        text: `Email: ${email}\n\nMessage:\n${message}`
-    };
-
-    try {
-        await transporter.sendMail(mailOptions);
-        res.status(200).json({ success: true });
-    } catch (error) {
-        console.error('Error sending email:', error);
-        res.status(500).json({ success: false, error: 'Failed to send email.' });
-    }
-});
-
-// Serve the index.html file
+// Serve the index.html file from the public directory
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
 
-// Fallback to index.html for any routes not handled
+// Serve the product.html file from the public directory
+app.get('/products', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public/product.html'));
+});
+
+// Fallback to index.html for any other routes (keep this at the end)
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'public/index.html'));
 });
-
 
 // Start the server
-app.listen(3001, () => {
-    console.log('Server running on port 3001');
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
 });

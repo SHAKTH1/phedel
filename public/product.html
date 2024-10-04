@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="./css/product.css"> <!-- Link your styles here -->
+</head>
+<body>
+    <div class = "heading">
+    <h1> OUR PRODUCTS</h1></div>
+    <!-- Chatbot component -->
+    <div id="chatbot-component"></div>
+
+    <!-- Products Section -->
+    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+        <!-- Product cards will be dynamically inserted here -->
+    </div>
+
+  <!-- Product Modal Structure (Ensure this exists in your HTML) -->
+<div id="product-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+    <div class=" MDL bg-white rounded-lg p-4 max-w-2xl w-full">
+        <button id="close-modal" class="text-red-500 float-right">X</button>
+        <h2 id="modal-title" class="text-2xl font-bold mb-2"></h2>
+        <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-md mb-4">
+        <p id="modal-description" class="mb-4"></p>
+        <p id="modal-full-description" class="mb-4"></p>
+        
+        <h3 class="text-xl font-semibold">Benefits</h3>
+        <ul id="modal-benefits" class="mb-4 list-disc pl-5"></ul>
+        
+        <h3 class="text-xl font-semibold">Applications</h3>
+        <ul id="modal-applications" class="mb-4 list-disc pl-5"></ul>
+        
+        <a id="modal-download-btn" href="" class="bg-blue-500 text-white px-4 py-2 rounded-md" download>Download Catalog</a>
+    </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+<script src="./js/product.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html> 
