@@ -1,134 +1,124 @@
-//step 1: get DOM
-let nextDom = document.getElementById('next');
-let prevDom = document.getElementById('prev');
+document.addEventListener('DOMContentLoaded', function () {
+    // **Banner Slider** Code
+    (function () {
+        let bannerList = document.querySelector('.banner-slider .banner-list');
+        let bannerItems = document.querySelectorAll('.banner-slider .banner-list .banner-item');
+        let bannerDots = document.querySelectorAll('.banner-slider .banner-dots li');
+        let bannerPrev = document.querySelector('.banner-slider #prev');
+        let bannerNext = document.querySelector('.banner-slider #next');
 
-let carouselDom = document.querySelector('.carousel');
-let SliderDom = carouselDom.querySelector('.carousel .list');
-let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
-let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
-let timeDom = document.querySelector('.carousel .time');
+        let bannerActive = 0;
+        let bannerLength = bannerItems.length - 1;
 
-thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-let timeRunning = 3000;
-let timeAutoNext = 7000;
+        bannerNext.onclick = function () {
+            if (bannerActive + 1 > bannerLength) {
+                bannerActive = 0;
+            } else {
+                bannerActive = bannerActive + 1;
+            }
+            reloadBannerSlider();
+        }
 
-nextDom.onclick = function(){
-    showSlider('next');    
-}
+        bannerPrev.onclick = function () {
+            if (bannerActive - 1 < 0) {
+                bannerActive = bannerLength;
+            } else {
+                bannerActive = bannerActive - 1;
+            }
+            reloadBannerSlider();
+        }
 
-prevDom.onclick = function(){
-    showSlider('prev');    
-}
+        let bannerAutoSlide = setInterval(() => { bannerNext.click(); }, 3000);
 
-let runTimeOut;
-let runNextAuto = setTimeout(() => {
-    nextDom.click();
-}, timeAutoNext);
+        function reloadBannerSlider() {
+            let checkLeft = bannerItems[bannerActive].offsetLeft;
+            bannerList.style.left = -checkLeft + 'px';
 
-function showSlider(type){
-    let SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
-    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
-    
-    let activeItem = SliderDom.querySelector('.carousel .list .item.active');
-    let activeIndex = Array.from(SliderItemsDom).indexOf(activeItem);
-    
-    // Remove the active class from the current item
-    activeItem.classList.remove('active');
-    
-    if(type === 'next'){
-        let nextIndex = (activeIndex + 1) % SliderItemsDom.length;
-        SliderItemsDom[nextIndex].classList.add('active');
-        SliderDom.appendChild(SliderItemsDom[activeIndex]);
-        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
-        carouselDom.classList.add('next');
-    } else {
-        let prevIndex = (activeIndex - 1 + SliderItemsDom.length) % SliderItemsDom.length;
-        SliderItemsDom[prevIndex].classList.add('active');
-        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
-        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
-        carouselDom.classList.add('prev');
-    } 
-    
-    clearTimeout(runTimeOut);
-    runTimeOut = setTimeout(() => {
-        carouselDom.classList.remove('next');
-        carouselDom.classList.remove('prev');
-    }, timeRunning);
+            let lastActiveDot = document.querySelector('.banner-slider .banner-dots li.active');
+            if (lastActiveDot) lastActiveDot.classList.remove('active');
+            bannerDots[bannerActive].classList.add('active');
+        }
 
-    clearTimeout(runNextAuto);
-    runNextAuto = setTimeout(() => {
-        nextDom.click();
-    }, timeAutoNext);
-}
+        bannerDots.forEach((li, key) => {
+            li.addEventListener('click', function () {
+                bannerActive = key;
+                reloadBannerSlider();
+            });
+        });
+    })();
 
-// Initialize the first item as active
-document.querySelector('.carousel .list .item').classList.add('active');
+    // **Carousel Slider** Code (in #our-process)
+    (function () {
+        let carousel = document.querySelector('.carousel');
+        let sliderList = carousel.querySelector('.carousel .list');
+        let thumbnailBorder = document.querySelector('.carousel .thumbnail');
+        let carouselItems = sliderList.querySelectorAll('.carousel .list .item');
+        let carouselThumbnails = thumbnailBorder.querySelectorAll('.carousel .thumbnail .item');
+        let carouselPrev = carousel.querySelector('.carousel .arrows #prev');
+        let carouselNext = carousel.querySelector('.carousel .arrows #next');
 
-//page loader 
-window.addEventListener('load', function() {
-    const loader = document.getElementById('page-loader');
-    loader.style.display = 'none';
+        let carouselActive = 0;
+        let carouselLength = carouselItems.length - 1;
+
+        carouselNext.onclick = function () {
+            showCarouselSlider('next');
+        }
+
+        carouselPrev.onclick = function () {
+            showCarouselSlider('prev');
+        }
+
+        let carouselAutoSlide = setInterval(() => { carouselNext.click(); }, 7000);
+
+        function showCarouselSlider(type) {
+            let activeItem = sliderList.querySelector('.carousel .list .item.active');
+            let activeIndex = Array.from(carouselItems).indexOf(activeItem);
+
+            if (activeItem) activeItem.classList.remove('active');
+
+            if (type === 'next') {
+                let nextIndex = (activeIndex + 1) % carouselItems.length;
+                carouselItems[nextIndex].classList.add('active');
+                sliderList.appendChild(carouselItems[activeIndex]);
+                thumbnailBorder.appendChild(carouselThumbnails[0]);
+                carousel.classList.add('next');
+            } else {
+                let prevIndex = (activeIndex - 1 + carouselItems.length) % carouselItems.length;
+                carouselItems[prevIndex].classList.add('active');
+                sliderList.prepend(carouselItems[carouselItems.length - 1]);
+                thumbnailBorder.prepend(carouselThumbnails[carouselThumbnails.length - 1]);
+                carousel.classList.add('prev');
+            }
+
+            clearTimeout(carouselTimeout);
+            carouselTimeout = setTimeout(() => {
+                carousel.classList.remove('next');
+                carousel.classList.remove('prev');
+            }, 3000);
+
+            clearTimeout(carouselAutoSlide);
+            carouselAutoSlide = setInterval(() => {
+                carouselNext.click();
+            }, 7000);
+        }
+
+        // Initialize the first item as active
+        carouselItems[0].classList.add('active');
+    })();
+
+    // Page loader
+    window.addEventListener('load', function () {
+        const loader = document.getElementById('page-loader');
+        if (loader) loader.style.display = 'none';
+    });
+
+    // Navbar toggle button
+    const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
+    const navbarSticky = document.getElementById('navbar-sticky');
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            navbarSticky.classList.toggle('show');
+        });
+    }
 });
-
-const toggleButton = document.querySelector('[data-collapse-toggle="navbar-sticky"]');
-const navbarSticky = document.getElementById('navbar-sticky');
-
-toggleButton.addEventListener('click', () => {
-  navbarSticky.classList.toggle('show');
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const slider = document.querySelector(".slider");
-    const logos = document.querySelector(".logos");
-  
-    // Clone the logos to create an infinite loop effect
-    const clone = logos.cloneNode(true);
-    slider.appendChild(clone);
-  });
-  
-
-  let list = document.querySelector('.banner-slider .banner-list');
-  let items = document.querySelectorAll('.banner-slider .banner-list .banner-item');
-  let dots = document.querySelectorAll('.banner-slider .banner-dots li');
-  let prev = document.getElementById('prev');
-  let next = document.getElementById('next');
-  
-  let active = 0;
-  let lengthitems = items.length - 1;
-  
-  next.onclick = function() {
-      if (active + 1 > lengthitems) {
-          active = 0;
-      } else {
-          active = active + 1;
-      }
-      reloadslider();
-  }
-  
-  prev.onclick = function() {
-      if (active - 1 < 0) {
-          active = lengthitems;
-      } else {
-          active = active - 1;
-      }
-      reloadslider();
-  }
-  
-  let autoslide = setInterval(() => { next.click(); }, 3000);
-  
-  function reloadslider() {
-      let checkleft = items[active].offsetLeft;
-      list.style.left = -checkleft + 'px';
-  
-      let lastactiveDot = document.querySelector('.banner-slider .banner-dots li.active');
-      if (lastactiveDot) lastactiveDot.classList.remove('active');
-      dots[active].classList.add('active');
-  }
-  
-  dots.forEach((li, key) => {
-      li.addEventListener('click', function() {
-          active = key;
-          reloadslider();
-      });
-  });
-  
