@@ -8,21 +8,22 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, 'public'))); // Serve static files from 'public' folder
 
-// Email sending routes (unchanged)
+
+// Email sending routes
 app.post('/submit-chatbot', async (req, res) => {
     const { name, productHelp, email, contactNumber } = req.body;
 
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.GMAIL_USER,
-            pass: process.env.GMAIL_PASS
+            user: 'shakthi.amarnath@gmail.com', // Your email address
+            pass: 'leot sigm nvur fgou' // Your email app password (not your actual email password)
         }
     });
 
     const mailOptions = {
-        from: process.env.GMAIL_USER,
-        to: process.env.GMAIL_USER,
+        from: 'shakthi.amarnath@gmail.com', // Your email address
+        to: 'shakthi.amarnath@gmail.com', // Recipient email address
         subject: 'Product Enquiry',
         text: `Name: ${name}\nProduct Help: ${productHelp.join(', ')}\nEmail: ${email}\nContact: ${contactNumber}`
     };
@@ -35,6 +36,8 @@ app.post('/submit-chatbot', async (req, res) => {
         res.status(500).json({ error: 'Failed to send email.' });
     }
 });
+
+
 
 // Serve the index.html file from the public directory
 app.get('/', (req, res) => {

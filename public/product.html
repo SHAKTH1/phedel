@@ -3,43 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products</title>
-    <link rel="stylesheet" href="./css/product.css"> <!-- Link your styles here -->
+    <title>PHEDEL_PRODUCTS</title>
+    
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/product.css"> <!-- Include your old product styles if needed -->
 </head>
 <body>
-    <div class = "heading">
-    <h1> OUR PRODUCTS</h1></div>
-    <!-- Chatbot component -->
-    <div id="chatbot-component"></div>
+    <div class="main">
+        <div class="container">
+            <h1>OUR PRODUCTS</h1>
 
-    <!-- Products Section -->
-    <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
-        <!-- Product cards will be dynamically inserted here -->
-    </div>
+            <!-- Chatbot Trigger Button -->
 
-  <!-- Product Modal Structure (Ensure this exists in your HTML) -->
-<div id="product-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
-    <div class=" MDL bg-white rounded-lg p-4 max-w-2xl w-full">
-        <button id="close-modal" class="text-red-500 float-right">X</button>
-        <h2 id="modal-title" class="text-2xl font-bold mb-2"></h2>
-        <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-md mb-4">
-        <p id="modal-description" class="mb-4"></p>
-        <p id="modal-full-description" class="mb-4"></p>
-        
-        <h3 class="text-xl font-semibold">Benefits</h3>
-        <ul id="modal-benefits" class="mb-4 list-disc pl-5"></ul>
-        
-        <h3 class="text-xl font-semibold">Applications</h3>
-        <ul id="modal-applications" class="mb-4 list-disc pl-5"></ul>
-        
-        <a id="modal-download-btn" href="" class="bg-blue-500 text-white px-4 py-2 rounded-md" download>Download Catalog</a>
-    </div>
+<div id="chatbot-component">
+    <div id="hover-message" class="tooltip">Hello! I'm Shakthi. How may I assist you today?</div>
+
 </div>
 
+            <!-- Filters Section -->
+            <div class="filters">
+                <button data-category="all">All</button>
+                <button data-category="T-Shirt">Datacenters</button>
+                <button data-category="Short">Outdoor Enclosures</button>
+                <button data-category="Pants">Server & IT Racks</button>
+                <button data-category="Shoes">Structured Cabling</button>
+                <button data-category="Shoes">Telecom Solutions</button>
+                <button data-category="Shoes">Solar Industry Solutions</button>
+                <button data-category="Shoes">Eletrical & Automation Panels</button>
+                <button data-category="Shoes">Storage Racks</button>
+                <input type="text" id="searchProduct" placeholder="Search product">
+            </div>
 
-<script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
-<script src="./js/product.js"></script>
-<script src="https://cdn.tailwindcss.com"></script>
+            <!-- Products Grid Section -->
+            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4">
+                <!-- Products will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
 
+    <!-- Chatbot Component -->
+    <div id="chatbot-component"></div>
+
+    <!-- Product Modal Structure -->
+    <div id="product-modal" class="fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center hidden">
+        <div class="MDL bg-white rounded-lg p-4 max-w-2xl w-full">
+            <button id="close-modal" class="text-red-500 float-right">X</button>
+            <h2 id="modal-title" class="text-2xl font-bold mb-2"></h2>
+            <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-md mb-4">
+            <p id="modal-description" class="mb-4"></p>
+            <p id="modal-full-description" class="mb-4"></p>
+            
+            <h3 class="text-xl font-semibold">Benefits</h3>
+            <ul id="modal-benefits" class="mb-4 list-disc pl-5"></ul>
+            
+            <h3 class="text-xl font-semibold">Applications</h3>
+            <ul id="modal-applications" class="mb-4 list-disc pl-5"></ul>
+            
+            <a id="modal-download-btn" href="" class="bg-blue-500 text-white px-4 py-2 rounded-md" download>Download Catalog</a>
+        </div>
+    </div>
+
+    <section class="standards-compliances">
+        <h1>STANDARDS & COMPLIANCES</h1>
+        <div class="compliances-grid">
+            <div class="compliance-item">
+                <img src="./product_image/lion.png" alt="ISO 9001:2015">
+                <h2>ISO 9001:2015</h2>
+                <p>EN 61587-1:2012 Mechanical Structures for Electronic Equipment</p>
+            </div>
+            <div class="compliance-item">
+                <img src="./product_image/iso.png" alt="Make in India">
+                <h2>MAKE IN INDIA</h2>
+            </div>
+            <div class="compliance-item">
+                <img src="./product_image/rohs.png" alt="RoHS">
+                <h2>ENVIRONMENT FRIENDLY<br>ISO 14001</h2>
+                <p>Environmental Management System RoHS Compliancy</p>
+            </div>
+            <div class="compliance-item">
+                <img src="./product_image/ce.png" alt="CE Conform">
+                <h2>CE CONFORM<br>TO EN 60950-1:2006</h2>
+                <p>Information Technology Equipment – Safety – General Requirement</p>
+            </div>
+        </div>
+    </section>
+    <section class="network-cabinets">
+        <h1>To Protect Against Environmental Conditions And Make Them Easy For Technicians To Work With, Outdoor Network Cabinets Tend To Have Some Core Design Traits.</h1>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h2>Backplates</h2>
+                <img src="./product_image/green_line_small.png" alt="back">
+                <p>Also known as enclosure panels or mounting plates, backplates provide a surface within the enclosure for equipment mounting.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Sealed Doors</h2>
+                <img src="./product_image/green_line_small.png" alt="sealed">
+                <p>Enclosure doors feature a reliable seal to prevent the ingress of moisture and dust. These doors also lock to prevent unauthorized people from reaching into or tampering with the enclosure. Doors, lids or access panels may also feature hinges that stay open for easy access for personnel.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Cable Entrances</h2>
+                <img src="./product_image/green_line_small.png" alt="cable">
+                <p>Cable entrances are pre-cut or prepared openings in the enclosure that provide outlets for cables.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Heating And Cooling</h2>
+                <img src="./product_image/green_line_small.png" alt="heating">
+                <p>Outdoor enclosures will often have air conditioning and integrated heating to help keep components from facing temperature extremes. This feature helps improve battery lives for components and outdoor battery backup systems. These will usually come with air filters as well to prevent dust from entering the enclosure.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Mounting Equipment</h2>
+                <img src="./product_image/green_line_small.png" alt="mounting">
+                <p>Outdoor enclosures may be ground-mounted, on poles or on building exteriors, and will feature mounting equipment to facilitate.</p>
+            </div>
+            <div class="feature-item">
+                <h2>Sealing And Protective Equipment</h2>
+                <img src="./product_image/green_line_small.png" alt="sealing">
+                <p>Outdoor enclosures use gaskets and O-rings to seal surfaces and protect against dirt and moisture. Additionally, grommets in these enclosures protect and secure cables.</p>
+            </div>
+        </div>
+        <p class="additional-features">Additional Features May Also Be Available, Depending On The Size, Type And Application Of The Cabinet In Question. Some Variations May Include More Fans And Vents, Cable And More.</p>
+    </section>
+    
+<section class="technical-data">
+    <h1>TECHNICAL DATA</h1>
+    <img src="./product_image/technical_line.png" alt="tech-line">
+
+    <div class="technical-data-table">    
+        <div class="table-header">
+            <div class="table-cell">ITEM</div>
+            <div class="table-cell">DESCRIPTION</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Type</div>
+            <div class="table-cell">Floor Mount</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Protection Rating</div>
+            <div class="table-cell">IP 54/IP55/IP65</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Material</div>
+            <div class="table-cell">Galvanized Iron Or CRCA</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Frame Type/Construction</div>
+            <div class="table-cell">Welded</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Standard</div>
+            <div class="table-cell">DIN 41494 Complied To 19" Standards</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Front Door</div>
+            <div class="table-cell">157-Degree Opening Type Lockable Metal Door</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Working Temperature</div>
+            <div class="table-cell">40–55°C</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Power</div>
+            <div class="table-cell">Basic</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Sensors</div>
+            <div class="table-cell">Door Sensor / Temperature & Humidity Sensor / Smoke Sensor</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Cooling</div>
+            <div class="table-cell">Heat Exchanger / Thermoelectric Cooler</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Surface Finish</div>
+            <div class="table-cell">PP - Powder Coating</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Color</div>
+            <div class="table-cell">Grey RAL7035</div>
+        </div>
+    </div>
+</section>
+
+    <!-- Script JS -->
+    <script src="./js/product.js"></script> <!-- Include the updated product JavaScript here -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
-</html> 
+</html>
