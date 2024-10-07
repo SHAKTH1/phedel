@@ -6,3 +6,5 @@ deployment:
     - cd $DEPLOYPATH/..
     - npm install
     - npm start
+
+
