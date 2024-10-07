@@ -2,9 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=public_html/phedelco/public
-    - cp -R images $DEPLOYPATH
-    - cd $DEPLOYPATH/..
-    - npm install
-    - npm start
-
-
+    - /bin/cp -R images $DEPLOYPATH
+    - /usr/local/bin/npm install
+    - /usr/local/bin/npm start
