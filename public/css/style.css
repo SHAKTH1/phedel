@@ -2603,7 +2603,7 @@ width: 120px;
   }
   .map-container {
       width: 90%;
-      height: 200px;
+      height: 323px;
       margin-bottom: 39%;
   }
 
@@ -2884,6 +2884,8 @@ width: 120px;
   }
    .footer_part {
     padding: 10px;
+    padding-top: 8%;
+    height: 64vh;
   }
   .container{
   text-align: center;
@@ -3231,17 +3233,24 @@ width: 120px;
   border: 1px solid transparent;
 }
 
+
 /**********************footer part css*******************/
 /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_footer.scss */
 .footer_part .footer_top {
   padding: 140px 0 100px;
 }
 
+
 @media (max-width: 576px) {
   /* line 3, ../../01 cl html template/03_jun 2019/186_Gaiming_html/sass/_footer.scss */
   .footer_part .footer_top {
     padding: 70px 0;
+
   }
+  .footer-container{
+    text-align: center;
+  }
+ 
 }
 
 @media (max-width: 991px) {
